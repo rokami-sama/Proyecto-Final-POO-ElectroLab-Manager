@@ -8,6 +8,22 @@ package ComponentesElectronicos;
  *
  * @author rodri
  */
-public class Resistencia {
+public class Resistencia extends ComponentesElectronicos {
+    private double resistenciaOhm;
+    private double potenciaWatts;
+
+    public Resistencia(String nombre, String codigo, int stock, double voltaje, double resistenciaOhm, double potenciaWatts) {
+        super(nombre, codigo, stock, voltaje);
+        this.resistenciaOhm = resistenciaOhm;
+        this.potenciaWatts = potenciaWatts;
+    }
     
+    public double calcularCorriente(){
+        
+    }
+    
+    @Override
+    public double calcularConsumo(){
+        
+    }
 }
