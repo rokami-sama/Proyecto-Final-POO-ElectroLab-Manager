@@ -12,13 +12,11 @@ public abstract class ComponentesElectronicos {
     private String nombre;
     private String codigo;
     private int stock;
-    private double voltaje;
-
-    public ComponentesElectronicos(String nombre, String codigo, int stock, double voltaje) {
+    
+    public ComponentesElectronicos(String nombre, String codigo, int stock) {
         this.nombre = nombre;
         this.codigo = codigo;
         this.stock = stock;
-        this.voltaje = voltaje;
     }
 
     public String getNombre() {
@@ -33,10 +31,6 @@ public abstract class ComponentesElectronicos {
         return stock;
     }
 
-    public double getVoltaje() {
-        return voltaje;
-    }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -49,9 +43,6 @@ public abstract class ComponentesElectronicos {
         this.stock = stock;
     }
 
-    public void setVoltaje(double voltaje) {
-        this.voltaje = voltaje;
-    }
     
     public void agregarStock(int c){
         
@@ -68,7 +59,7 @@ public abstract class ComponentesElectronicos {
 
     @Override
     public String toString() {
-        return "ComponentesElectronicos{" + "nombre=" + nombre + ", codigo=" + codigo + ", stock=" + stock + ", voltaje=" + voltaje + '}';
+        return "ComponentesElectronicos{" + "nombre=" + nombre + ", codigo=" + codigo + ", stock=" + stock + '}';
     }
     
     

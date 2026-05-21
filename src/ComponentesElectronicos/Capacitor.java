@@ -12,8 +12,8 @@ public class Capacitor extends ComponentesElectronicos {
     private double capacitancia;
     private String tipo;
 
-    public Capacitor(String nombre, String codigo, int stock, double voltaje, String tipo, double capacitancia) {
-        super(nombre, codigo, stock, voltaje);
+    public Capacitor(String nombre, String codigo, int stock, String tipo, double capacitancia) {
+        super(nombre, codigo, stock);
         this.capacitancia = capacitancia;
         this.tipo = tipo;
     }

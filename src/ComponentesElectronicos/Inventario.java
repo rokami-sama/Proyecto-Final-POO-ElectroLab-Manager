@@ -15,9 +15,9 @@ public abstract class Inventario extends ComponentesElectronicos{
     private ArrayList<ComponentesElectronicos> componentes;
     private ArrayList<Prestamo> prestamos;
 
-    public Inventario(String nombre, String codigo, int stock, double voltaje,
+    public Inventario(String nombre, String codigo, int stock,
             ArrayList<ComponentesElectronicos> componentes, ArrayList<Prestamo> prestamos) {
-        super(nombre, codigo, stock, voltaje);
+        super(nombre, codigo, stock);
         this.componentes =new ArrayList<>(componentes);
         this.prestamos =new ArrayList<>(prestamos);
     }

@@ -12,8 +12,8 @@ public class Resistencia extends ComponentesElectronicos {
     private double resistenciaOhm;
     private double potenciaWatts;
 
-    public Resistencia(String nombre, String codigo, int stock, double voltaje, double resistenciaOhm, double potenciaWatts) {
-        super(nombre, codigo, stock, voltaje);
+    public Resistencia(String nombre, String codigo, int stock, double resistenciaOhm, double potenciaWatts) {
+        super(nombre, codigo, stock);
         this.resistenciaOhm = resistenciaOhm;
         this.potenciaWatts = potenciaWatts;
     }
