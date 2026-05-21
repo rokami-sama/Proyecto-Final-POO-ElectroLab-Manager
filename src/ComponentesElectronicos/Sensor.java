@@ -17,6 +17,23 @@ public class Sensor extends ComponentesElectronicos {
         this.tipoMedicion = tipoMedicion;
         this.rango = rango;
     }
+
+    public String getTipoMedicion() {
+        return tipoMedicion;
+    }
+
+    public double getRango() {
+        return rango;
+    }
+
+    public void setTipoMedicion(String tipoMedicion) {
+        this.tipoMedicion = tipoMedicion;
+    }
+
+    public void setRango(double rango) {//falta la condicion para que sea solo positivo
+        this.rango = rango;
+    }
+    
     
 
     @Override

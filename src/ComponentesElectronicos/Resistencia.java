@@ -17,6 +17,22 @@ public class Resistencia extends ComponentesElectronicos {
         this.resistenciaOhm = resistenciaOhm;
         this.potenciaWatts = potenciaWatts;
     }
+
+    public double getResistenciaOhm() {
+        return resistenciaOhm;
+    }
+
+    public double getPotenciaWatts() {
+        return potenciaWatts;
+    }
+
+    public void setResistenciaOhm(double resistenciaOhm) {//falta la condicion para que sea solo positivo
+        this.resistenciaOhm = resistenciaOhm;
+    }
+
+    public void setPotenciaWatts(double potenciaWatts) {//falta la condicion para que sea solo positivo
+        this.potenciaWatts = potenciaWatts;
+    }
     
     public double calcularCorriente(){
         return Math.sqrt(potenciaWatts)/Math.sqrt(resistenciaOhm);

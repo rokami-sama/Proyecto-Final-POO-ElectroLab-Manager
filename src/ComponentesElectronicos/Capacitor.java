@@ -17,6 +17,22 @@ public class Capacitor extends ComponentesElectronicos {
         this.capacitancia = capacitancia;
         this.tipo = tipo;
     }
+
+    public double getCapacitancia() {
+        return capacitancia;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setCapacitancia(double capacitancia) {
+        this.capacitancia = capacitancia;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
     
 
     @Override
