@@ -4,6 +4,7 @@
  */
 package ComponentesElectronicos;
 
+import Personas.Prestamo;
 import java.util.ArrayList;
 
 /**
