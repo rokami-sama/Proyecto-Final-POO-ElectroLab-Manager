@@ -18,10 +18,6 @@ public class Sensor extends ComponentesElectronicos {
         this.rango = rango;
     }
     
-    public void calibrar(){
-        
-    }
-    
 
     @Override
     public String toString() {
