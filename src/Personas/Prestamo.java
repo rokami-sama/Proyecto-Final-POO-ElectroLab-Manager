@@ -6,7 +6,8 @@ package Personas;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-
+import ComponentesElectronicos.ComponentesElectronicos;
+import ComponentesElectronicos.Inventario;
 /**
  *
  * @author rodri
