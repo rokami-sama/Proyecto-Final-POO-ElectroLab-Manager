@@ -4,58 +4,26 @@
  */
 package ComponentesElectronicos;
 
+import java.io.Serializable;
+
 /**
  *
  * @author rodri
  */
-public abstract class ComponentesElectronicos {
+public abstract class ComponentesElectronicos implements Serializable {
     private String nombre;
     private String codigo;
-    private int stock;
     
-    public ComponentesElectronicos(String nombre, String codigo, int stock) {
+    public ComponentesElectronicos(String nombre, String codigo) {
         this.nombre = nombre;
         this.codigo = codigo;
-        this.stock = stock;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
+    public String getNombre() {return nombre;}
+    public String getCodigo() {return codigo;}
 
-    public String getCodigo() {
-        return codigo;
-    }
-
-    public int getStock() {
-        return stock;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
-
-    public void setStock(int stock) {
-        this.stock = stock;
-    }
-
-    
-    public void agregarStock(int c){
-        
-    } 
-    
-    public void retirarStock(int c){
-        
-    }
-    
-    public String mostrarInfo(){
-        
-    }
-    
+    public void setNombre(String nombre) {this.nombre = nombre;}
+    public void setCodigo(String codigo) {this.codigo = codigo;}
 
     @Override
     public String toString() {

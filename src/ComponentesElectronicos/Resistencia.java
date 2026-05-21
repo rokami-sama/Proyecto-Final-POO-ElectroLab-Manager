@@ -11,6 +11,7 @@ package ComponentesElectronicos;
 public class Resistencia extends ComponentesElectronicos {
     private double resistenciaOhm;
     private double potenciaWatts;
+    private int stock;
 
     public Resistencia(String nombre, String codigo, int stock, double resistenciaOhm, double potenciaWatts) {
         super(nombre, codigo, stock);

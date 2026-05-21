@@ -11,6 +11,7 @@ package ComponentesElectronicos;
 public class Capacitor extends ComponentesElectronicos {
     private double capacitancia;
     private String tipo;
+    private int stock;
 
     public Capacitor(String nombre, String codigo, int stock, String tipo, double capacitancia) {
         super(nombre, codigo, stock);
