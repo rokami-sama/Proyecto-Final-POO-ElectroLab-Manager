@@ -19,10 +19,9 @@ public class Resistencia extends ComponentesElectronicos {
     }
     
     public double calcularCorriente(){
-        
+        return Math.sqrt(potenciaWatts)/Math.sqrt(resistenciaOhm);
     }
     
-
 
     @Override
     public String toString() {
