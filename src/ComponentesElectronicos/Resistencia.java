@@ -26,4 +26,10 @@ public class Resistencia extends ComponentesElectronicos {
     public double calcularConsumo(){
         
     }
+
+    @Override
+    public String toString() {
+        return "Resistencia{" + "resistenciaOhm=" + resistenciaOhm + ", potenciaWatts=" + potenciaWatts + '}';
+    }
+    
 }

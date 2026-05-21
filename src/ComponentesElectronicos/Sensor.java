@@ -26,4 +26,10 @@ public class Sensor extends ComponentesElectronicos {
     public double calcularConsumo(){
         
     }
+
+    @Override
+    public String toString() {
+        return "Sensor{" + "tipoMedicion=" + tipoMedicion + ", rango=" + rango + '}';
+    }
+    
 }

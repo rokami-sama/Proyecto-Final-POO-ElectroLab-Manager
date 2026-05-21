@@ -28,4 +28,10 @@ public class Capacitor extends ComponentesElectronicos {
     public double calcularConsumo(){
         
     }
+
+    @Override
+    public String toString() {
+        return "Capacitor{" + "capacitancia=" + capacitancia + ", tipo=" + tipo + '}';
+    }
+    
 }
