@@ -21,6 +21,14 @@ public abstract class Inventario extends ComponentesElectronicos{
         this.componentes =new ArrayList<>(componentes);
         this.prestamos =new ArrayList<>(prestamos);
     }
+
+    public void agregarComponente(){
+        List Lista= new 
+    }
+    
+    public void eliminarComponente(){
+        
+    }
     
     public ComponentesElectronicos buscarComponente(){
         
