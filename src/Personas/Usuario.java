@@ -4,6 +4,10 @@
  */
 package Personas;
 
+import Excepctions.*;
+import ComponentesElectronicos.*;
+import java.time.LocalDate;
+import java.time.LocalTime;
 /**
  *
  * @author rodri
@@ -17,33 +21,21 @@ public abstract class Usuario {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
+    public String getNombre() {return nombre;}
+    public String getId() {return id;}
 
-    public String getId() {
-        return id;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
+    public void setNombre(String nombre) {this.nombre = nombre;}
+    public void setId(String id) {this.id = id;}
  
     public void solicitarPrestamo(){
-        
+        if 
     }
     
-    public int limitePrestamos(){
-        
-    }
+    public int limitePrestamos() throws PrestamoInvalidoException,StockInsuficienteException;
 
     @Override
     public String toString() {
-        return "Usuario{" + "nombre=" + nombre + ", id=" + id + '}';
+        return "nombre=" + nombre + ", id=" + id + ',';
     }
     
     

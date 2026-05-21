@@ -3,7 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Personas;
-
+import Excepctions.PrestamoInvalidoException;
+import Excepctions.StockInsuficienteException;
+import java.time.LocalDate;
+import java.time.LocalTime;
 /**
  *
  * @author rodri
@@ -15,6 +18,10 @@ public class Docente extends Usuario {
         super(nombre, id);
         this.especialidad = especialidad;
     }
+
+    public String getEspecialidad() {return especialidad;}
+
+    public void setEspecialidad(String especialidad) {this.especialidad = especialidad;}
     
     @Override
     public int limitePrestamos(){
@@ -23,7 +30,7 @@ public class Docente extends Usuario {
 
     @Override
     public String toString() {
-        return "Docente{" + "especialidad=" + especialidad + '}';
+        return "Docente{" +super.toString()+ "especialidad=" + especialidad + '}';
     }
     
     
