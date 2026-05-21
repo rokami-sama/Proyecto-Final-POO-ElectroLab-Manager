@@ -11,12 +11,10 @@ package Personas;
 public abstract class Usuario {
     private String nombre;
     private String id;
-    private String carrera;
 
-    public Usuario(String nombre, String id, String carrera) {
+    public Usuario(String nombre, String id) {
         this.nombre = nombre;
         this.id = id;
-        this.carrera = carrera;
     }
 
     public String getNombre() {
@@ -27,10 +25,6 @@ public abstract class Usuario {
         return id;
     }
 
-    public String getCarrera() {
-        return carrera;
-    }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -38,11 +32,7 @@ public abstract class Usuario {
     public void setId(String id) {
         this.id = id;
     }
-
-    public void setCarrera(String carrera) {
-        this.carrera = carrera;
-    }
-    
+ 
     public void solicitarPrestamo(){
         
     }
@@ -53,7 +43,7 @@ public abstract class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{" + "nombre=" + nombre + ", id=" + id + ", carrera=" + carrera + '}';
+        return "Usuario{" + "nombre=" + nombre + ", id=" + id + '}';
     }
     
     
