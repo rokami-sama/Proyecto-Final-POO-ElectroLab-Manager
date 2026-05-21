@@ -10,9 +10,11 @@ package Personas;
  */
 public class Estudiante extends Usuario {
     private int semestre;
-
+    private String carrera;
+    
     public Estudiante(String nombre, String id, String carrera, int semestre) {
-        super(nombre, id, carrera);
+        super(nombre, id);
+        this.carrera= carrera;
         this.semestre = semestre;
     }
     
