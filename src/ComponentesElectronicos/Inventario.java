@@ -4,26 +4,26 @@
  */
 package ComponentesElectronicos;
 
-import Personas.Prestamo;
 import java.util.ArrayList;
 
+import Personas.Prestamo;
 /**
  *
  * @author rodri
  */
-public class Inventario extends ComponentesElectronicos{
+public abstract class Inventario extends ComponentesElectronicos{
     private ArrayList<ComponentesElectronicos> componentes;
     private ArrayList<Prestamo> prestamos;
 
     public Inventario(String nombre, String codigo, int stock, double voltaje,
             ArrayList<ComponentesElectronicos> componentes, ArrayList<Prestamo> prestamos) {
         super(nombre, codigo, stock, voltaje);
-        this.componentes = componentes;
-        this.prestamos = prestamos;
+        this.componentes =new ArrayList<>(componentes);
+        this.prestamos =new ArrayList<>(prestamos);
     }
 
     public void agregarComponente(){
-        
+        List Lista= new 
     }
     
     public void eliminarComponente(){
