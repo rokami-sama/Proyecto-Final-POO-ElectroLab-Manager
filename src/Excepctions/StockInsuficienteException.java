@@ -16,15 +16,7 @@ public class StockInsuficienteException extends Exception {
      * detail message.
      */
     public StockInsuficienteException() {
+        super("Error: Componente acabado.");
     }
 
-    /**
-     * Constructs an instance of <code>StockInsuficienteException</code> with
-     * the specified detail message.
-     *
-     * @param msg the detail message.
-     */
-    public StockInsuficienteException(String msg) {
-        super(msg);
-    }
 }

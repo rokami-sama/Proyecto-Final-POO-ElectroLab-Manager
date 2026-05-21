@@ -16,15 +16,7 @@ public class ComponenteNoEncontradoException extends Exception {
      * without detail message.
      */
     public ComponenteNoEncontradoException() {
+        super("Error: No se encontro el componente.");
     }
 
-    /**
-     * Constructs an instance of <code>ComponenteNoEncontradoException</code>
-     * with the specified detail message.
-     *
-     * @param msg the detail message.
-     */
-    public ComponenteNoEncontradoException(String msg) {
-        super(msg);
-    }
 }

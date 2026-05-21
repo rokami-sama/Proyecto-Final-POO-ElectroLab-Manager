@@ -15,15 +15,7 @@ public class PrestamoInvalidoException extends Exception {
      * detail message.
      */
     public PrestamoInvalidoException() {
+        super("Error: No se puede realizar el prestamo.");    
     }
 
-    /**
-     * Constructs an instance of <code>PrestamoInvalidoException</code> with the
-     * specified detail message.
-     *
-     * @param msg the detail message.
-     */
-    public PrestamoInvalidoException(String msg) {
-        super(msg);
-    }
 }
