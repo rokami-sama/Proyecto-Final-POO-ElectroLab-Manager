@@ -27,11 +27,8 @@ public abstract class Usuario {
     public void setNombre(String nombre) {this.nombre = nombre;}
     public void setId(String id) {this.id = id;}
  
-    public void solicitarPrestamo(){
-        if 
-    }
+    public abstract void solicitarPrestamo();
     
-    public int limitePrestamos() throws PrestamoInvalidoException,StockInsuficienteException;
 
     @Override
     public String toString() {

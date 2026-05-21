@@ -5,13 +5,14 @@
 package Personas;
 import Excepctions.PrestamoInvalidoException;
 import Excepctions.StockInsuficienteException;
+import ComponentesElectronicos.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 /**
  *
  * @author rodri
  */
-public class Docente extends Usuario {
+public abstract class Docente extends Usuario {
     private String especialidad;
 
     public Docente(String nombre, String id, String especialidad) {
@@ -23,7 +24,15 @@ public class Docente extends Usuario {
 
     public void setEspecialidad(String especialidad) {this.especialidad = especialidad;}
     
-    @Override
+    public void solicitarPrestamo(){
+        try {
+            if(){
+                
+            }
+        } catch (Exception e) {
+        }
+    }
+    
     public int limitePrestamos(){
         return 10;
     }

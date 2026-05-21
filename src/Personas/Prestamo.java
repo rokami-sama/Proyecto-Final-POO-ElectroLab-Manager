@@ -6,13 +6,12 @@ package Personas;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import ComponentesElectronicos.ComponentesElectronicos;
-import ComponentesElectronicos.Inventario;
+import ComponentesElectronicos.*;
 /**
  *
  * @author rodri
  */
-public class Prestamo extends Usuario {
+public abstract class Prestamo extends Usuario {
     private LocalDate fecha;
     private LocalTime hora;
     private boolean devuelto; 
@@ -22,6 +21,10 @@ public class Prestamo extends Usuario {
         this.fecha = fecha;
         this.hora = hora;
         this.devuelto = devuelto;
+    }
+    
+    public void solicitarPrestamo(){
+        
     }
     
     public void devolver(){
