@@ -11,8 +11,8 @@ package Personas;
 public class Docente extends Usuario {
     private String especialidad;
 
-    public Docente(String nombre, String id, String carrera, String especialidad) {
-        super(nombre, id, carrera);
+    public Docente(String nombre, String id, String especialidad) {
+        super(nombre, id);
         this.especialidad = especialidad;
     }
     
