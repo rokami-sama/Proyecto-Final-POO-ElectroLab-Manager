@@ -53,15 +53,19 @@ public abstract class ComponentesElectronicos {
         this.voltaje = voltaje;
     }
     
-    public void agregarStock(){
+    public void agregarStock(int c){
         
     } 
     
-    public void retirarStock(){
+    public void retirarStock(int c){
         
     }
     
     public String mostrarInfo(){
+        
+    }
+    
+    public double calcularConsumo(){
         
     }
 
