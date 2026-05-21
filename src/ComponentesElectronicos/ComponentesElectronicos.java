@@ -65,9 +65,6 @@ public abstract class ComponentesElectronicos {
         
     }
     
-    public double calcularConsumo(){
-        
-    }
 
     @Override
     public String toString() {
