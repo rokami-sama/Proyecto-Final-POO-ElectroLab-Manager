@@ -24,10 +24,6 @@ public class Capacitor extends ComponentesElectronicos {
     public void descargar(){
         
     }
-    @Override
-    public double calcularConsumo(){
-        
-    }
 
     @Override
     public String toString() {

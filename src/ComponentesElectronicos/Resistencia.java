@@ -22,10 +22,7 @@ public class Resistencia extends ComponentesElectronicos {
         
     }
     
-    @Override
-    public double calcularConsumo(){
-        
-    }
+
 
     @Override
     public String toString() {

@@ -22,10 +22,6 @@ public class Sensor extends ComponentesElectronicos {
         
     }
     
-    @Override
-    public double calcularConsumo(){
-        
-    }
 
     @Override
     public String toString() {
