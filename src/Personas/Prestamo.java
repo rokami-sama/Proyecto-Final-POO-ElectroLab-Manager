@@ -17,8 +17,8 @@ public class Prestamo extends Usuario {
     private LocalTime hora;
     private boolean devuelto; 
 
-    public Prestamo(String nombre, String id, String carrera, LocalDate fecha, LocalTime hora, boolean devuelto) {
-        super(nombre, id, carrera);
+    public Prestamo(String nombre, String id, LocalDate fecha, LocalTime hora, boolean devuelto) {
+        super(nombre, id);
         this.fecha = fecha;
         this.hora = hora;
         this.devuelto = devuelto;
