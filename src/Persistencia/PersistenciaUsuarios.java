@@ -9,5 +9,10 @@ package Persistencia;
  * @author rodri
  */
 public class PersistenciaUsuarios {
-    
+    public void guardar(){
+        
+    }
+    public void cargar(){
+        
+    }
 }
