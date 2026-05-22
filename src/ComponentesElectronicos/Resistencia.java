@@ -16,13 +16,9 @@ public class Resistencia extends ComponentesElectronicos {
         this.resistenciaOhm = resistenciaOhm;
     }
 
-    public double getResistenciaOhm() {
-        return resistenciaOhm;
-    }
+    public double getResistenciaOhm() {return resistenciaOhm;}
 
-    public void setResistenciaOhm(double resistenciaOhm) {//falta la condicion para que sea solo positivo
-        this.resistenciaOhm = resistenciaOhm;
-    }
+    public void setResistenciaOhm(double resistenciaOhm) {this.resistenciaOhm = resistenciaOhm;}
 
     @Override
     public String toString() {
