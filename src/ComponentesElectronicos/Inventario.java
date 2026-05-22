@@ -5,33 +5,37 @@
 package ComponentesElectronicos;
 
 import java.util.ArrayList;
-
+import java.io.Serializable;
+import Excepctions.*;
 /**
  *
  * @author rodri
  */
-public abstract class Inventario extends ComponentesElectronicos{
-    private ArrayList<ComponentesElectronicos> componentes;
+public class Inventario implements Serializable{
+    private ArrayList<ComponentesElectronicos> componentes= new ArrayList<>();
 
-    public Inventario(String nombre, String codigo,
-            ArrayList<ComponentesElectronicos> componentes) {
-        super(nombre, codigo);
-        this.componentes =new ArrayList<>(componentes);
-    }
-
-    public void agregarComponente(){
-        List Lista= new 
+    public void agregarComponente(ComponentesElectronicos c){
+        componentes.add(c);
     }
     
-    public void eliminarComponente(){
-        
+    public void eliminarComponente(ComponentesElectronicos c){
+        if(c){
+            
+        }
     }
     
-    public ComponentesElectronicos buscarComponente(){
-        
+    public ComponentesElectronicos buscarComponente(String codigo) throws ComponenteNoEncontradoException{
+        for(ComponentesElectronicos c: componentes){
+            if(c.getCodigo().equalsIgnoreCase(codigo)){
+                return c;
+            }
+        }
+        throw new ComponenteNoEncontradoException();
     }
     
-    public void mostrarStockCritico(){
-        
+    public void mostrarComponentes(){
+        for(ComponentesElectronicos c: componentes){
+            System.out.println(c);
+        }
     }
 }
