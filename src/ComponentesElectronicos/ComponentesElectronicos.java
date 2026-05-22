@@ -5,7 +5,7 @@
 package ComponentesElectronicos;
 
 import java.io.Serializable;
-
+import Excepctions.*;
 /**
  *
  * @author rodri
@@ -33,8 +33,12 @@ public abstract class ComponentesElectronicos implements Serializable {
     public void agregarStock(int s){
         stock+=s;
     }
-    public void reducirStock(){
-        
+    public void reducirStock() throws StockInsuficienteException{
+        if(stock<=0) {
+            throw new StockInsuficienteException();
+        }else{
+            stock--;
+        }
         
     }
     

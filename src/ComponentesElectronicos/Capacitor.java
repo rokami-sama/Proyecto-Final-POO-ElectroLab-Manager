@@ -11,12 +11,11 @@ package ComponentesElectronicos;
 public class Capacitor extends ComponentesElectronicos {
     private double capacitancia;
     private String tipo;
-    private int stock;
 
     public Capacitor(String nombre, String codigo, int stock, String tipo, double capacitancia) {
         super(nombre, codigo, stock);
-        this.capacitancia = capacitancia;
         this.tipo = tipo;
+        this.capacitancia = capacitancia;
     }
 
     public double getCapacitancia() {

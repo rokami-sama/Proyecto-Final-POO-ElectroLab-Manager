@@ -11,13 +11,11 @@ package ComponentesElectronicos;
 public class Sensor extends ComponentesElectronicos {
     private String tipoMedicion;
     private double rango;
-    private int stock;
 
     public Sensor(String nombre, String codigo, int stock, String tipoMedicion, double rango) {
-        super(nombre, codigo);
+        super(nombre, codigo, stock);
         this.tipoMedicion = tipoMedicion;
         this.rango = rango;
-        this.stock=stock;
     }
 
     public String getTipoMedicion() {
