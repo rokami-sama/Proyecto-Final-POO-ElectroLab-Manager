@@ -4,6 +4,13 @@
  */
 package Main;
 
+import Excepctions.*;
+import ComponentesElectronicos.*;
+import Persistencia.*;
+import Personas.*;
+
+import java.util.ArrayList;
+import java.util.Scanner;
 /**
  *
  * @author rodri
