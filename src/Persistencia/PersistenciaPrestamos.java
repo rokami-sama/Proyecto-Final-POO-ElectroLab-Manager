@@ -4,6 +4,10 @@
  */
 package Persistencia;
 
+import Personas.*;
+
+import java.io.*;
+import java.util.ArrayList;
 /**
  *
  * @author rodri
