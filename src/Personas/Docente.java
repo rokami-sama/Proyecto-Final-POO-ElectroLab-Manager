@@ -24,15 +24,7 @@ public abstract class Docente extends Usuario {
 
     public void setEspecialidad(String especialidad) {this.especialidad = especialidad;}
     
-    public void solicitarPrestamo(){
-        try {
-            if(){
-                
-            }
-        } catch (Exception e) {
-        }
-    }
-    
+    @Override
     public int limitePrestamos(){
         return 10;
     }

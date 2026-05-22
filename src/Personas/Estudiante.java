@@ -29,6 +29,7 @@ public abstract class Estudiante extends Usuario {
     public void setCarrera(String carrera) {this.carrera = carrera;}
     
     
+    @Override
     public int limitePrestamos(){
         return 3;
     }

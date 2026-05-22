@@ -36,6 +36,13 @@ public abstract class Usuario implements Serializable{
         return prestamosActivos<limitePrestamos();
     }
     
+    public void agregarPrestamo(){
+        prestamosActivos++;
+    }
+    
+    public void devolverPrestamo(){
+        
+    }
 
     @Override
     public String toString() {
