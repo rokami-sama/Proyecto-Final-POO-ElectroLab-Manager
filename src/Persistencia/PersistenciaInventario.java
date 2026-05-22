@@ -4,11 +4,14 @@
  */
 package Persistencia;
 
+import ComponentesElectronicos.*;
+import java.io.*;
+
 /**
  *
  * @author rodri
  */
-public class PersistenciaInventario {
+public class PersistenciaInventario implements {
     public void guardar(){
         
     }
