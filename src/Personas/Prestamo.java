@@ -4,37 +4,46 @@
  */
 package Personas;
 
+import Excepctions.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import ComponentesElectronicos.*;
+import java.io.Serializable;
 /**
  *
  * @author rodri
  */
-public abstract class Prestamo extends Usuario {
-    private LocalDate fecha;
-    private LocalTime hora;
-    private boolean devuelto; 
+public abstract class Prestamo implements Serializable{
+    private Usuario usuario;
+    private ComponentesElectronicos componente;
+    private LocalDate fechaPrestamo;
+    private LocalDate fechaLimite;
+    private boolean devuelto;
+    private int cantidad;
 
-    public Prestamo(String nombre, String id, LocalDate fecha, LocalTime hora, boolean devuelto) {
-        super(nombre, id);
-        this.fecha = fecha;
-        this.hora = hora;
-        this.devuelto = devuelto;
-    }
-    
-    public void solicitarPrestamo(){
-        
+    public Prestamo(Usuario usuario, ComponentesElectronicos componente, int cantidad) {
+        this.usuario= usuario;
+        this.componente = componente;
+        this.cantidad=cantidad;
+        fechaPrestamo = LocalDate.now();
+        fechaLimite = fechaPrestamo.plusDays(7);
+        devuelto = false;
     }
     
     public void devolver(){
-        
+        devuelto= true;
+        componente.devolverStock(cantidad);
+        usuario.devolverPrestamo();
     }
 
     @Override
     public String toString() {
-        return "Prestamo{" + "fecha=" + fecha + ", hora=" + hora + ", devuelto=" + devuelto + '}';
+        return "Prestamo{" + "usuario=" + usuario + ", componente=" + componente + 
+                ", fechaPrestamo=" + fechaPrestamo + ", fechaLimite=" + fechaLimite + ", devuelto=" + devuelto + '}';
     }
+    
+
+    
     
     
 }
