@@ -41,7 +41,7 @@ public abstract class Usuario implements Serializable{
     }
     
     public void devolverPrestamo(){
-        
+        prestamosActivos--;
     }
 
     @Override
