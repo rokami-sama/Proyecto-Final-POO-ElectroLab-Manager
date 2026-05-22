@@ -17,13 +17,7 @@ public class Inventario implements Serializable{
     public void agregarComponente(ComponentesElectronicos c){
         componentes.add(c);
     }
-    
-    public void eliminarComponente(ComponentesElectronicos c){
-        if(c){
-            
-        }
-    }
-    
+
     public ComponentesElectronicos buscarComponente(String codigo) throws ComponenteNoEncontradoException{
         for(ComponentesElectronicos c: componentes){
             if(c.getCodigo().equalsIgnoreCase(codigo)){
@@ -36,6 +30,7 @@ public class Inventario implements Serializable{
     public void mostrarComponentes(){
         for(ComponentesElectronicos c: componentes){
             System.out.println(c);
+            System.out.println("----------------");
         }
     }
 }
