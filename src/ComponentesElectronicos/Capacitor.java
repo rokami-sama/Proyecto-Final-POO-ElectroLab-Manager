@@ -10,30 +10,16 @@ package ComponentesElectronicos;
  */
 public class Capacitor extends ComponentesElectronicos {
     private double capacitancia;
-    private String tipo;
 
-    public Capacitor(String nombre, String codigo, int stock, String tipo, double capacitancia) {
+    public Capacitor(String nombre, String codigo, int stock, double capacitancia) {
         super(nombre, codigo, stock);
-        this.tipo = tipo;
         this.capacitancia = capacitancia;
     }
 
-    public double getCapacitancia() {
-        return capacitancia;
-    }
+    public double getCapacitancia() {return capacitancia;}
 
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setCapacitancia(double capacitancia) {
-        this.capacitancia = capacitancia;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-    
+    public void setCapacitancia(double capacitancia) {this.capacitancia = capacitancia;}
+   
 
     @Override
     public String toString() {
