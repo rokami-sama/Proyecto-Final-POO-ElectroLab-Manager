@@ -23,7 +23,7 @@ public class Capacitor extends ComponentesElectronicos {
 
     @Override
     public String toString() {
-        return "Capacitor{" + "capacitancia=" + capacitancia + ", tipo=" + tipo + '}';
+        return "Capacitor{" + "capacitancia=" + capacitancia +'}';
     }
     
 }
