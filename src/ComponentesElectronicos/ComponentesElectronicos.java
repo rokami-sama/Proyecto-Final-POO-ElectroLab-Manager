@@ -33,19 +33,20 @@ public abstract class ComponentesElectronicos implements Serializable {
     public void agregarStock(int s){
         stock+=s;
     }
-    public void reducirStock() throws StockInsuficienteException{
-        if(stock<=0) {
+    public void reducirStock(int cantidad) throws StockInsuficienteException{
+        if(cantidad>stock) {
             throw new StockInsuficienteException();
         }else{
-            stock--;
+            stock-=cantidad;
         }
-        
     }
-    
+    public void devolverStock(int cantidad){
+        stock+=cantidad;
+    }
+
     @Override
     public String toString() {
-        return "ComponentesElectronicos{" + "nombre=" + nombre + ", codigo=" + codigo + '}';
+        return "ComponentesElectronicos{" + "nombre=" + nombre + ", codigo=" + codigo + ", stock=" + stock + '}';
     }
-    
-    
+
 }
