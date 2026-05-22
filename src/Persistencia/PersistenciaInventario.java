@@ -23,7 +23,7 @@ public class PersistenciaInventario {
         }
     }
     
-    public static Inventario cargar(){
+    public static Inventario cargar() throws ClassNotFoundException, FileNotFoundException{
         try {
             ObjectInputStream entrada= new ObjectInputStream(new FileInputStream("Inventario.dat"));
             Inventario inventario=(Inventario) entrada.readObject();
