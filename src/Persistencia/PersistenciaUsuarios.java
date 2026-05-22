@@ -24,7 +24,14 @@ public class PersistenciaUsuarios {
         }
     }
     
-    public static ArrayList<Usuario> cargar(){
-        
+    public static ArrayList<Usuario> cargar() throws ClassNotFoundException, FileNotFoundException{
+        try {
+            ObjectInputStream entrada= new ObjectInputStream(new FileInputStream("Usuarios.dat"));
+            ArrayList<Usuario> usuarios= (ArrayList<Usuario>) entrada.readObject();
+            entrada.close();
+            return usuarios;
+        } catch (IOException e) {
+            return new ArrayList<>();
+        }
     }
 }
