@@ -4,15 +4,27 @@
  */
 package Persistencia;
 
+import Personas.*;
+
+import java.io.*;
+import java.util.ArrayList;
 /**
  *
  * @author rodri
  */
 public class PersistenciaUsuarios {
-    public void guardar(){
-        
+    
+    public static void guardar(ArrayList<Usuario> usuario){
+        try {
+            ObjectOutputStream salida= new ObjectOutputStream(new FileOutputStream("Usuarios.dat",true));
+            salida.writeObject(usuario);
+            salida.close();
+        } catch (IOException e) {
+            System.out.println("Error: No se pudo guardar el archivo.");
+        }
     }
-    public void cargar(){
+    
+    public static ArrayList<Usuario> cargar(){
         
     }
 }
