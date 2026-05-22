@@ -8,13 +8,14 @@ import Excepctions.*;
 import ComponentesElectronicos.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.io.Serializable;
 /**
  *
  * @author rodri
  */
-public abstract class Usuario {
-    private String nombre;
-    private String id;
+public abstract class Usuario implements Serializable{
+    protected String nombre;
+    protected String id;
 
     public Usuario(String nombre, String id) {
         this.nombre = nombre;
@@ -27,7 +28,7 @@ public abstract class Usuario {
     public void setNombre(String nombre) {this.nombre = nombre;}
     public void setId(String id) {this.id = id;}
  
-    public abstract void solicitarPrestamo();
+    public abstract void prestamosActivos();
     
 
     @Override
