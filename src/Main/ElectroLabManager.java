@@ -24,9 +24,8 @@ public class ElectroLabManager {
         Scanner sc= new Scanner(System.in);
         
         Inventario inventario= PersistenciaInventario.cargar();
-        ArrayList<Usuario> usuarios= new ArrayList<>();
-        ArrayList<Prestamo> prestamo= new ArrayList<>();
-        
+        ArrayList<Usuario> usuarios= PersistenciaUsuarios.cargar();
+        ArrayList<Prestamo> prestamo= PersistenciaPrestamos.cargar();
         
         
         
