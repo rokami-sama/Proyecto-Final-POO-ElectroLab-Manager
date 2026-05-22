@@ -36,7 +36,7 @@ public abstract class Estudiante extends Usuario {
 
     @Override
     public String toString() {
-        return "Estudiante{" +super.toString()+ "semestre= " + semestre + '}';
+        return "Estudiante{" +super.toString()+ "semestre= " + semestre + ", carrera= " +carrera+ '}';
     }
     
 }
