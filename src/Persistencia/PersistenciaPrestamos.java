@@ -14,17 +14,25 @@ import java.util.ArrayList;
  */
 public class PersistenciaPrestamos {
     
-    public static void guardar(ArrayList<Usuario> usuario){
+    public static void guardar(ArrayList<Prestamo> prestamo){
         try {
             ObjectOutputStream salida=new ObjectOutputStream(new FileOutputStream("Prestamos.dat",true));
-            salida.writeObject(usuario);
+            salida.writeObject(prestamo);
             salida.close();
         } catch (IOException e) {
             System.out.println("Error al guardar los prestamos.");
         }
     }
     
-    public void cargar(){
-        
+    public static ArrayList<Prestamo> cargar() throws ClassNotFoundException, FileNotFoundException{
+        try {
+            ObjectInputStream entrada=new ObjectInputStream(new FileInputStream("Prestamos.dat"));
+            ArrayList<Prestamo> prestamos=(ArrayList<Prestamo>) entrada.readObject();
+            entrada.close();
+            return prestamos;
+                    
+        } catch (IOException e) {
+            return new ArrayList<>();
+        }
     }
 }
