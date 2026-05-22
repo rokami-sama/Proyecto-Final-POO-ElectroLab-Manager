@@ -13,9 +13,17 @@ import java.util.ArrayList;
  * @author rodri
  */
 public class PersistenciaPrestamos {
-    public void guardar(){
-        
+    
+    public static void guardar(ArrayList<Usuario> usuario){
+        try {
+            ObjectOutputStream salida=new ObjectOutputStream(new FileOutputStream("Prestamos.dat",true));
+            salida.writeObject(usuario);
+            salida.close();
+        } catch (IOException e) {
+            System.out.println("Error al guardar los prestamos.");
+        }
     }
+    
     public void cargar(){
         
     }
