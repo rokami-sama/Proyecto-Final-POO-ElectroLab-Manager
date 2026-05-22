@@ -16,10 +16,12 @@ import java.io.Serializable;
 public abstract class Usuario implements Serializable{
     protected String nombre;
     protected String id;
+    protected int prestamosActivos;
 
     public Usuario(String nombre, String id) {
         this.nombre = nombre;
         this.id = id;
+        prestamosActivos=0;
     }
 
     public String getNombre() {return nombre;}
@@ -28,7 +30,11 @@ public abstract class Usuario implements Serializable{
     public void setNombre(String nombre) {this.nombre = nombre;}
     public void setId(String id) {this.id = id;}
  
-    public abstract void prestamosActivos();
+    public abstract int limitePrestamos();
+    
+    public boolean puedePrestar(){
+        return prestamosActivos<limitePrestamos();
+    }
     
 
     @Override
