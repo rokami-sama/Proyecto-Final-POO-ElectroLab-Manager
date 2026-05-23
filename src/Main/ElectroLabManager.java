@@ -36,9 +36,11 @@ public class ElectroLabManager {
             System.out.println("1.Registrar Usuario");
             System.out.println("2.Agregar Componente");
             System.out.println("3.Prestar Componente");
-            System.out.println("4.Mostrar Inventario");
-            System.out.println("5.Buscar Componente");
-            System.out.println("6.Salir");
+            System.out.println("4.Mostrar Prestamos");
+            System.out.println("5.Devolver Prestamo");
+            System.out.println("6.Mostrar Inventario");
+            System.out.println("7.Buscar Componente");
+            System.out.println("8.Salir");
 
             opcion = sc.nextInt();
             sc.nextLine();
