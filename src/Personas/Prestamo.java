@@ -34,7 +34,7 @@ public class Prestamo implements Serializable{
     public void devolverPrestamo(){
         devuelto= true;
         componente.devolverStock(cantidad);
-        usuario.devolverPrestamo();
+        usuario.devolverPrestamo(this);
     }
 
     @Override
