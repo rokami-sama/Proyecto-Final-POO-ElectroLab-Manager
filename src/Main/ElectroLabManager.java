@@ -35,6 +35,7 @@ public class ElectroLabManager {
             System.out.println("1.Registrar Usuario");
             System.out.println("2.Agregar Componente");
             System.out.println("3.Prestar Componente");
+            System.out.println("3.Prestar Componente");
             System.out.println("4.Salir");
             
             opcion=sc.nextInt();
@@ -94,16 +95,31 @@ public class ElectroLabManager {
                             break;
                         case 'b':
                             System.out.println("Nombre: ");
-                            String nombreDoc=sc.next();
-                            System.out.println("ID: ");
-                            String idDoc=sc.next();
-                            System.out.println("Especialidad: ");
-                            String especialidadDoc=sc.next();
+                            String nombreCap=sc.next();
+                            System.out.println("Codigo: ");
+                            String codigoCap=sc.next();
+                            System.out.println("Stock: ");
+                            int stockCap=sc.nextInt();
+                            System.out.println("Resistencia: ");
+                            double capacitanciaCap=sc.nextDouble();
                             
-                            Docente docente=new Docente(nombreDoc, idDoc, especialidadDoc);
-                            System.out.println(docente.toString());
+                            Capacitor capacitor=new Capacitor(nombreCap, codigoCap, stockCap, capacitanciaCap);
+                            System.out.println(capacitor.toString());
                             break;
-                    
+                        case 'c':
+                            System.out.println("Nombre: ");
+                            String nombreSen=sc.next();
+                            System.out.println("Codigo: ");
+                            String codigoSen=sc.next();
+                            System.out.println("Stock: ");
+                            int stockSen=sc.nextInt();
+                            System.out.println("TipoMedicion: ");
+                            String capacitanciaSen=sc.next();
+                            
+                            Sensor sensor=new Sensor(nombreSen, codigoSen, stockSen, capacitanciaSen);
+                            System.out.println(sensor.toString());
+                            break;
+                    }
                 case 3:
                     
                 case 4:
