@@ -141,6 +141,7 @@ public class ElectroLabManager {
                     break;
 
                 case 6://Salir
+                    PersistenciaInventario.guardar(inventario);
                     System.out.println("Muchas Gracias por usar ELECTROLAB MANAGER! Adios.");
                     break;
 
