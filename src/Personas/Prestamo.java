@@ -29,11 +29,7 @@ public abstract class Prestamo implements Serializable{
         fechaLimite = fechaPrestamo.plusDays(7);
         devuelto = false;
     }
-    public void mostrarPrestamos(){
-        for(Prestamo p: prestamos){
-            p.toString();
-        }
-    }
+    
     public void devolver(){
         devuelto= true;
         componente.devolverStock(cantidad);
