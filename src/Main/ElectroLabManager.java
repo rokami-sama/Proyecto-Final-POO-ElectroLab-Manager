@@ -125,11 +125,27 @@ public class ElectroLabManager {
                             break;
                     }
                 case 3://Prestar Componente
-
-                case 6://Mostrar Inventario
-                    inventario.mostrarComponentes();
+                    
+                    
                     break;
-
+                case 4://Mostrar Prestamos
+                    try {
+                        PersistenciaPrestamos.cargar();
+                    } catch (IOException e) {
+                        System.out.println(e);
+                    }
+                    break;
+                case 5://Devolver Prestamo
+                    
+                    
+                    break;
+                case 6://Mostrar Inventario
+                    try {
+                        PersistenciaInventario.cargar();
+                    } catch (IOException e) {
+                        System.out.println(e);
+                    }
+                    break;
                 case 7://Buscar Componente
                     System.out.println("Codigo: ");
                     String codigoComp= sc.next();
