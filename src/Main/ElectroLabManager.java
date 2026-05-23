@@ -140,17 +140,14 @@ public class ElectroLabManager {
                             break;
                     }
                 case 3://Prestar Componente
+                    Prestamo p= new Prestamo(usuario, componente, opcion);
 
+                    usuario.agregarPrestamo(p);
+
+                    prestamo.add(p);
                     break;
                 case 4://Mostrar Prestamos
-                    if (prestamo.isEmpty()) {
-                        System.out.println("No hay prestamos");
-                    }else{
-                        for (Prestamo p : prestamo) {
-                            System.out.println(p);
-                            System.out.println("----------------");
-                        }
-                    }
+                    usuario.mostrarPrestamos();
                     break;
                 case 5://Devolver Prestamo
 
