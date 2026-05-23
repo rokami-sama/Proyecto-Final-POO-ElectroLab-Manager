@@ -13,7 +13,7 @@ import java.io.Serializable;
  *
  * @author rodri
  */
-public abstract class Prestamo implements Serializable{
+public class Prestamo implements Serializable{
     private Usuario usuario;
     private ComponentesElectronicos componente;
     private int cantidad;
@@ -30,7 +30,8 @@ public abstract class Prestamo implements Serializable{
         devuelto = false;
     }
     
-    public void devolver(){
+    
+    public void devolverPrestamo(){
         devuelto= true;
         componente.devolverStock(cantidad);
         usuario.devolverPrestamo();
