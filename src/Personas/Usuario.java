@@ -22,7 +22,7 @@ public abstract class Usuario implements Serializable{
     public Usuario(String nombre, String id) {
         this.nombre = nombre;
         this.id = id;
-        prestamos=new ArrayList<>;
+        prestamos=new ArrayList<>();
                 
     }
 
