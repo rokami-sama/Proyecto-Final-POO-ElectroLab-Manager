@@ -82,8 +82,8 @@ public class ElectroLabManager {
                             System.out.println(docente.toString());
                             break;
                     }
-                    default:
-                        System.out.println("Opcion Invalida");
+                default:
+                    System.out.println("Opcion Invalida");
                     break;
                 case 2://Agregar componente
                     System.out.println("a.Resistenica");
@@ -137,30 +137,30 @@ public class ElectroLabManager {
                             break;
                         default:
                             System.out.println("Opcion Invalida");
-                        break;
+                            break;
                     }
                 case 3://Prestar Componente
-                    
-                    
+
                     break;
                 case 4://Mostrar Prestamos
-                    try {
-                        prestamos.mostrarPrestamos():
-                    } catch (IOException e) {
-                        System.out.println(e);
+                    if (prestamo.isEmpty()) {
+                        System.out.println("No hay prestamos");
+                    }else{
+                        for (Prestamo p : prestamo) {
+                            System.out.println(p);
+                            System.out.println("----------------");
+                        }
                     }
-                    
                     break;
                 case 5://Devolver Prestamo
-                    
-                    
+
                     break;
                 case 6: //Mostrar Inventario
                     inventario.mostrarComponentes();
                     break;
                 case 7://Buscar Componente
                     System.out.println("Codigo: ");
-                    String codigoComp= sc.nextLine();
+                    String codigoComp = sc.nextLine();
                     try {
                         inventario.buscarComponente(codigoComp);
                     } catch (ComponenteNoEncontradoException ex) {
