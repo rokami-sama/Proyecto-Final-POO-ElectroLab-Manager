@@ -123,6 +123,8 @@ public class ElectroLabManager {
                 case 3://Prestar Componente
                     
                 case 4://Mostrar Inventario
+                    inventario.mostrarComponentes();
+                    break;
                     
                 case 5://Salir
                     System.out.println("Muchas Gracias por usar ELECTROLAB MANAGER! Adios.");
