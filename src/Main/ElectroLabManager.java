@@ -126,13 +126,11 @@ public class ElectroLabManager {
                     }
                 case 3://Prestar Componente
 
-                case 4://Mostrar Inventario
+                case 6://Mostrar Inventario
                     inventario.mostrarComponentes();
                     break;
 
-                case 5://Buscar Componente
-                    System.out.println("Nombre: ");
-                    String nombreComp= sc.next();
+                case 7://Buscar Componente
                     System.out.println("Codigo: ");
                     String codigoComp= sc.next();
                     try {
@@ -142,14 +140,14 @@ public class ElectroLabManager {
                     }
                     break;
 
-                case 6://Salir
+                case 8://Salir
                     PersistenciaInventario.guardar(inventario);
                     System.out.println("Muchas Gracias por usar ELECTROLAB MANAGER! Adios.");
                     break;
 
             }
 
-        } while (opcion != 6);
+        } while (opcion != 8);
 
     }
 
