@@ -45,6 +45,17 @@ public abstract class Usuario implements Serializable{
     public void devolverPrestamo(Prestamo p){
         prestamos.remove(p);
     }
+    public void mostrarPrestamos(){
+        if (prestamos.isEmpty()) {
+            System.out.println("No hay prestamos");
+        } else {
+            for (Prestamo p : prestamos) {
+                System.out.println(p);
+                System.out.println("----------------");
+            }
+        }
+    }
+    
 
     @Override
     public String toString() {
