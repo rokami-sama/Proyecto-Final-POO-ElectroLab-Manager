@@ -16,20 +16,24 @@ import java.io.Serializable;
 public abstract class Prestamo implements Serializable{
     private Usuario usuario;
     private ComponentesElectronicos componente;
+    private int cantidad;
     private LocalDate fechaPrestamo;
     private LocalDate fechaLimite;
     private boolean devuelto;
-    private int cantidad;
 
     public Prestamo(Usuario usuario, ComponentesElectronicos componente, int cantidad) {
         this.usuario= usuario;
-        this.componente = componente;
+        this.componente= componente;
         this.cantidad=cantidad;
         fechaPrestamo = LocalDate.now();
         fechaLimite = fechaPrestamo.plusDays(7);
         devuelto = false;
     }
-    
+    public void mostrarPrestamos(){
+        for(Prestamo p: prestamos){
+            p.toString();
+        }
+    }
     public void devolver(){
         devuelto= true;
         componente.devolverStock(cantidad);
