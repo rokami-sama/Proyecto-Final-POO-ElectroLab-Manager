@@ -72,7 +72,37 @@ public class ElectroLabManager {
                             System.out.println(docente.toString());
                             break;
                     }
-                case 2:
+                case 2://Agregar componente
+                    System.out.println("a.Resistenica");
+                    System.out.println("b.Capacitor");
+                    System.out.println("c.Sensor");
+                    char componente;
+                    componente=sc.next().charAt(0);
+                    switch(componente){
+                        case 'a':
+                            System.out.println("Nombre: ");
+                            String nombreRes=sc.next();
+                            System.out.println("Codigo: ");
+                            String codigoRes=sc.next();
+                            System.out.println("Stock: ");
+                            int stockRes=sc.nextInt();
+                            System.out.println("Resistencia: ");
+                            double resistenciaRes=sc.nextDouble();
+                            
+                            Resistencia resistencia=new Resistencia(nombreRes, codigoRes, stockRes, resistenciaRes);
+                            System.out.println(resistencia.toString());
+                            break;
+                        case 'b':
+                            System.out.println("Nombre: ");
+                            String nombreDoc=sc.next();
+                            System.out.println("ID: ");
+                            String idDoc=sc.next();
+                            System.out.println("Especialidad: ");
+                            String especialidadDoc=sc.next();
+                            
+                            Docente docente=new Docente(nombreDoc, idDoc, especialidadDoc);
+                            System.out.println(docente.toString());
+                            break;
                     
                 case 3:
                     
