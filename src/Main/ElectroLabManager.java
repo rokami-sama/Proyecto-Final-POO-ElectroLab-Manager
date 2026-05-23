@@ -35,8 +35,8 @@ public class ElectroLabManager {
             System.out.println("1.Registrar Usuario");
             System.out.println("2.Agregar Componente");
             System.out.println("3.Prestar Componente");
-            System.out.println("3.Prestar Componente");
-            System.out.println("4.Salir");
+            System.out.println("4.Mostrar Inventario");
+            System.out.println("5.Salir");
             
             opcion=sc.nextInt();
             sc.nextLine();
@@ -120,13 +120,16 @@ public class ElectroLabManager {
                             System.out.println(sensor.toString());
                             break;
                     }
-                case 3:
+                case 3://Prestar Componente
                     
-                case 4:
+                case 4://Mostrar Inventario
                     
+                case 5://Salir
+                    System.out.println("Muchas Gracias por usar ELECTROLAB MANAGER! Adios.");
+                    break;
             }
             
-        }
+        }while(opcion!=5);
         
         
         
