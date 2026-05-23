@@ -51,6 +51,7 @@ public class ElectroLabManager {
                     System.out.println("b.Docente");
                     char profesion;
                     profesion = sc.next().charAt(0);
+                    sc.nextLine();
                     switch (profesion) {
                         case 'a':
                             System.out.println("Nombre: ");
@@ -61,8 +62,10 @@ public class ElectroLabManager {
                             String carreraEst = sc.next();
                             System.out.println("Semestre: ");
                             int semestreEst = sc.nextInt();
+                            sc.nextLine();
 
                             Estudiante estudiante = new Estudiante(nombreEst, idEst, carreraEst, semestreEst);
+                            usuarios.add(estudiante);
                             System.out.println(estudiante.toString());
                             break;
                         case 'b':
@@ -72,17 +75,23 @@ public class ElectroLabManager {
                             String idDoc = sc.next();
                             System.out.println("Especialidad: ");
                             String especialidadDoc = sc.next();
+                            sc.nextLine();
 
                             Docente docente = new Docente(nombreDoc, idDoc, especialidadDoc);
+                            usuarios.add(docente);
                             System.out.println(docente.toString());
                             break;
                     }
+                    default:
+                        System.out.println("Opcion Invalida");
+                    break;
                 case 2://Agregar componente
                     System.out.println("a.Resistenica");
                     System.out.println("b.Capacitor");
                     System.out.println("c.Sensor");
                     char componente;
                     componente = sc.next().charAt(0);
+                    sc.nextLine();
                     switch (componente) {
                         case 'a':
                             System.out.println("Nombre: ");
@@ -93,6 +102,7 @@ public class ElectroLabManager {
                             int stockRes = sc.nextInt();
                             System.out.println("Resistencia: ");
                             double resistenciaRes = sc.nextDouble();
+                            sc.nextLine();
 
                             Resistencia resistencia = new Resistencia(nombreRes, codigoRes, stockRes, resistenciaRes);
                             System.out.println(resistencia.toString());
@@ -106,6 +116,7 @@ public class ElectroLabManager {
                             int stockCap = sc.nextInt();
                             System.out.println("Resistencia: ");
                             double capacitanciaCap = sc.nextDouble();
+                            sc.nextLine();
 
                             Capacitor capacitor = new Capacitor(nombreCap, codigoCap, stockCap, capacitanciaCap);
                             System.out.println(capacitor.toString());
@@ -119,10 +130,14 @@ public class ElectroLabManager {
                             int stockSen = sc.nextInt();
                             System.out.println("TipoMedicion: ");
                             String capacitanciaSen = sc.next();
+                            sc.nextLine();
 
                             Sensor sensor = new Sensor(nombreSen, codigoSen, stockSen, capacitanciaSen);
                             System.out.println(sensor.toString());
                             break;
+                        default:
+                            System.out.println("Opcion Invalida");
+                        break;
                     }
                 case 3://Prestar Componente
                     
@@ -130,25 +145,22 @@ public class ElectroLabManager {
                     break;
                 case 4://Mostrar Prestamos
                     try {
-                        PersistenciaPrestamos.cargar();
+                        prestamos.mostrarPrestamos():
                     } catch (IOException e) {
                         System.out.println(e);
                     }
+                    
                     break;
                 case 5://Devolver Prestamo
                     
                     
                     break;
-                case 6://Mostrar Inventario
-                    try {
-                        PersistenciaInventario.cargar();
-                    } catch (IOException e) {
-                        System.out.println(e);
-                    }
+                case 6: //Mostrar Inventario
+                    inventario.mostrarComponentes();
                     break;
                 case 7://Buscar Componente
                     System.out.println("Codigo: ");
-                    String codigoComp= sc.next();
+                    String codigoComp= sc.nextLine();
                     try {
                         inventario.buscarComponente(codigoComp);
                     } catch (ComponenteNoEncontradoException ex) {
@@ -158,6 +170,8 @@ public class ElectroLabManager {
 
                 case 8://Salir
                     PersistenciaInventario.guardar(inventario);
+                    PersistenciaPrestamos.guardar(prestamo);
+                    PersistenciaUsuarios.guardar(usuarios);
                     System.out.println("Muchas Gracias por usar ELECTROLAB MANAGER! Adios.");
                     break;
 
