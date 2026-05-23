@@ -31,7 +31,7 @@ public class Estudiante extends Usuario {
     
     @Override
     public int limitePrestamos(){
-        return 3;
+        return 10;
     }
 
     @Override
