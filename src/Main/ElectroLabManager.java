@@ -49,20 +49,28 @@ public class ElectroLabManager {
                     switch(profesion){
                         case 'a':
                             System.out.println("Nombre: ");
+                            String nombreEst=sc.next();
                             System.out.println("ID: ");
+                            String idEst=sc.next();
                             System.out.println("Carrera: ");
+                            String carreraEst=sc.next();
                             System.out.println("Semestre: ");
+                            int semestreEst=sc.nextInt();
                             
-                            Estudiante estudiante=new Estudiante(nombre, id, carrera, opcion);
+                            Estudiante estudiante=new Estudiante(nombreEst, idEst, carreraEst, semestreEst);
+                            System.out.println(estudiante.toString());
                             break;
                         case 'b':
+                            System.out.println("Nombre: ");
+                            String nombreDoc=sc.next();
+                            System.out.println("ID: ");
+                            String idDoc=sc.next();
+                            System.out.println("Especialidad: ");
+                            String especialidadDoc=sc.next();
                             
+                            Docente docente=new Docente(nombreDoc, idDoc, especialidadDoc);
+                            System.out.println(docente.toString());
                             break;
-                    }
-                    System.out.println("/nUsuario: ");
-                    usuarios=sc.nextLine();
-                    Usuario usuario=new Usuario(nombre, id) {
-                    
                     }
                 case 2:
                     
