@@ -12,7 +12,7 @@ import java.time.LocalTime;
  *
  * @author rodri
  */
-public abstract class Estudiante extends Usuario {
+public class Estudiante extends Usuario {
     private int semestre;
     private String carrera;
     
