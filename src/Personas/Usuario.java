@@ -9,6 +9,7 @@ import ComponentesElectronicos.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.io.Serializable;
+import java.util.ArrayList;
 /**
  *
  * @author rodri
@@ -16,12 +17,13 @@ import java.io.Serializable;
 public abstract class Usuario implements Serializable{
     protected String nombre;
     protected String id;
-    protected int prestamosActivos;
+    protected ArrayList<Prestamo> prestamos;
 
     public Usuario(String nombre, String id) {
         this.nombre = nombre;
         this.id = id;
-        prestamosActivos=0;
+        prestamos=new ArrayList<>;
+                
     }
 
     public String getNombre() {return nombre;}
@@ -33,15 +35,15 @@ public abstract class Usuario implements Serializable{
     public abstract int limitePrestamos();
     
     public boolean puedePrestar(){
-        return prestamosActivos<limitePrestamos();
+        return prestamos.size()<limitePrestamos();
     }
     
-    public void agregarPrestamo(){
-        prestamosActivos++;
+    public void agregarPrestamo(Prestamo p){
+        prestamos.add(p);
     }
     
-    public void devolverPrestamo(){
-        prestamosActivos--;
+    public void devolverPrestamo(Prestamo p){
+        prestamos.remove(p);
     }
 
     @Override
