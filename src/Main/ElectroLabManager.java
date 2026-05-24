@@ -82,9 +82,6 @@ public class ElectroLabManager {
                             System.out.println(docente.toString());
                             break;
                     }
-                default:
-                    System.out.println("Opcion Invalida");
-                    break;
                 case 2://Agregar componente
                     System.out.println("a.Resistenica");
                     System.out.println("b.Capacitor");
@@ -135,10 +132,8 @@ public class ElectroLabManager {
                             Sensor sensor = new Sensor(nombreSen, codigoSen, stockSen, capacitanciaSen);
                             System.out.println(sensor.toString());
                             break;
-                        default:
-                            System.out.println("Opcion Invalida");
-                            break;
                     }
+                    break;
                 case 3://Prestar Componente
                     try {
                         System.out.println("ID Usuario:");
@@ -173,7 +168,7 @@ public class ElectroLabManager {
                     }
                     break;
                 case 4://Mostrar Prestamos
-                    usuarios.mostrarPrestamos();
+                    Usuario.mostrarPrestamos();
                     break;
                 case 5://Devolver Prestamo
                     if (prestamo.isEmpty()) {
@@ -210,11 +205,13 @@ public class ElectroLabManager {
                     PersistenciaUsuarios.guardar(usuarios);
                     System.out.println("Muchas Gracias por usar ELECTROLAB MANAGER! Adios.");
                     break;
+                default:
+                    System.out.println("Opcion Invalida");
+                    break;
 
             }
-
         } while (opcion != 8);
-
+        
     }
 
 }
