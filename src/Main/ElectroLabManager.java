@@ -22,9 +22,9 @@ public class ElectroLabManager {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException,FileNotFoundException{
         Scanner sc = new Scanner(System.in);
-
+        
         Inventario inventario = PersistenciaInventario.cargar();
         ArrayList<Usuario> usuarios = PersistenciaUsuarios.cargar();
         ArrayList<Prestamo> prestamos= PersistenciaPrestamos.cargar();
@@ -235,7 +235,7 @@ public class ElectroLabManager {
                     System.out.println("Opcion Invalida");
                     break;
             }
-        } while (opcion != 8);
+        } while (opcion != 9);
         
     }
 
