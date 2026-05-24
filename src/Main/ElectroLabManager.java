@@ -152,7 +152,9 @@ public class ElectroLabManager {
                     if (usuario == null) {
                         throw new PrestamoInvalidoException();
                     }
-                    
+                    if (!usuario.puedePrestar()) {
+                        throw new PrestamoInvalidoException();
+                    }
                     
                     break;
                 case 4://Mostrar Prestamos
