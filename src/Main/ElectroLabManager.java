@@ -102,6 +102,7 @@ public class ElectroLabManager {
                             sc.nextLine();
 
                             Resistencia resistencia = new Resistencia(nombreRes, codigoRes, stockRes, resistenciaRes);
+                            inventario.agregarComponente(resistencia);
                             System.out.println(resistencia.toString());
                             break;
                         case 'b':
@@ -116,6 +117,7 @@ public class ElectroLabManager {
                             sc.nextLine();
 
                             Capacitor capacitor = new Capacitor(nombreCap, codigoCap, stockCap, capacitanciaCap);
+                            inventario.agregarComponente(capacitor);
                             System.out.println(capacitor.toString());
                             break;
                         case 'c':
@@ -130,6 +132,7 @@ public class ElectroLabManager {
                             sc.nextLine();
 
                             Sensor sensor = new Sensor(nombreSen, codigoSen, stockSen, capacitanciaSen);
+                            inventario.agregarComponente(sensor);
                             System.out.println(sensor.toString());
                             break;
                     }
@@ -168,7 +171,14 @@ public class ElectroLabManager {
                     }
                     break;
                 case 4://Mostrar Prestamos
-                    Usuario.mostrarPrestamos();
+                    if (prestamo.isEmpty()) {
+                        System.out.println("No hay prestamos");
+                    }else{
+                        for (Prestamo p : prestamo) {
+                            System.out.println(p);
+                            System.out.println("-------------");
+                        }
+                    }
                     break;
                 case 5://Devolver Prestamo
                     if (prestamo.isEmpty()) {
@@ -198,7 +208,6 @@ public class ElectroLabManager {
                         System.out.println(ex);
                     }
                     break;
-
                 case 8://Salir
                     PersistenciaInventario.guardar(inventario);
                     PersistenciaPrestamos.guardar(prestamo);
