@@ -27,7 +27,7 @@ public class ElectroLabManager {
 
         Inventario inventario = PersistenciaInventario.cargar();
         ArrayList<Usuario> usuarios = PersistenciaUsuarios.cargar();
-        ArrayList<Prestamo> prestamo = PersistenciaPrestamos.cargar();
+        ArrayList<Prestamo> prestamos= PersistenciaPrestamos.cargar();
 
         int opcion;
 
@@ -128,10 +128,10 @@ public class ElectroLabManager {
                             System.out.println("Stock: ");
                             int stockSen = sc.nextInt();
                             System.out.println("TipoMedicion: ");
-                            String capacitanciaSen = sc.nextLine();
+                            String tipoSen = sc.nextLine();
                             sc.nextLine();
 
-                            Sensor sensor = new Sensor(nombreSen, codigoSen, stockSen, capacitanciaSen);
+                            Sensor sensor = new Sensor(nombreSen, codigoSen, stockSen, tipoSen);
                             inventario.agregarComponente(sensor);
                             System.out.println(sensor.toString());
                             break;
@@ -163,7 +163,7 @@ public class ElectroLabManager {
                         componente.reducirStock(cantidad);
                         Prestamo p = new Prestamo(usuario, componente, cantidad);
                         usuario.agregarPrestamo(p);
-                        prestamo.add(p);
+                        prestamos.add(p);
                         System.out.println("Prestamo realizado correctamente");
                         
                     } catch (ComponenteNoEncontradoException | PrestamoInvalidoException | StockInsuficienteException e) {
@@ -171,28 +171,28 @@ public class ElectroLabManager {
                     }
                     break;
                 case 4://Mostrar Prestamos
-                    if (prestamo.isEmpty()) {
+                    if (prestamos.isEmpty()) {
                         System.out.println("No hay prestamos");
                     }else{
-                        for (Prestamo p : prestamo) {
+                        for (Prestamo p : prestamos) {
                             System.out.println(p);
                             System.out.println("-------------");
                         }
                     }
                     break;
                 case 5://Devolver Prestamo
-                    if (prestamo.isEmpty()) {
+                    if (prestamos.isEmpty()) {
                         System.out.println("No hay prestamos");
                     } else {
-                        for (int i = 0;i < prestamo.size();i++) {
-                            System.out.println(i + " - "+ prestamo.get(i));
+                        for (int i = 0;i < prestamos.size();i++) {
+                            System.out.println(i + " - "+ prestamos.get(i));
                             System.out.println("----------------");
                         }
                         System.out.println("Seleccione prestamo:");
                         int indice= sc.nextInt();
                         sc.nextLine();
-                        prestamo.get(indice).devolverPrestamo();
-                        prestamo.remove(indice);
+                        prestamos.get(indice).devolverPrestamo();
+                        prestamos.remove(indice);
                         System.out.println("Prestamo devuelto correctamente");
                     }
                     break;
@@ -210,7 +210,7 @@ public class ElectroLabManager {
                     break;
                 case 8://Salir
                     PersistenciaInventario.guardar(inventario);
-                    PersistenciaPrestamos.guardar(prestamo);
+                    PersistenciaPrestamos.guardar(prestamos);
                     PersistenciaUsuarios.guardar(usuarios);
                     System.out.println("Muchas Gracias por usar ELECTROLAB MANAGER! Adios.");
                     break;
