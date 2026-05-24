@@ -4,11 +4,6 @@
  */
 package Personas;
 
-import Persistencia.*;
-import Excepctions.*;
-import ComponentesElectronicos.*;
-import java.time.LocalDate;
-import java.time.LocalTime;
 import java.io.Serializable;
 import java.util.ArrayList;
 /**
@@ -29,7 +24,8 @@ public abstract class Usuario implements Serializable{
 
     public String getNombre() {return nombre;}
     public String getId() {return id;}
-
+    public ArrayList<Prestamo> getPrestamos() {return prestamos;}
+    
     public void setNombre(String nombre) {this.nombre = nombre;}
     public void setId(String id) {this.id = id;}
  
