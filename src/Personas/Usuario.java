@@ -4,6 +4,7 @@
  */
 package Personas;
 
+import Persistencia.*;
 import Excepctions.*;
 import ComponentesElectronicos.*;
 import java.time.LocalDate;
