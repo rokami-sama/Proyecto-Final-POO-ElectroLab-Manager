@@ -140,32 +140,40 @@ public class ElectroLabManager {
                             break;
                     }
                 case 3://Prestar Componente
-                    System.out.println("ID Usuario:");
-                    String idUsuario= sc.nextLine();
-                    Usuario usuario = null;
-                    for (Usuario u : usuarios) {
-                        if (u.getId().equalsIgnoreCase(idUsuario)) {
-                            usuario = u;
-                            break;
+                    try {
+                        System.out.println("ID Usuario:");
+                        String idUsuario = sc.nextLine();
+                        Usuario usuario = null;
+                        for (Usuario u : usuarios) {
+                            if (u.getId().equalsIgnoreCase(idUsuario)) {
+                                usuario = u;
+                                break;
+                            }
                         }
+                        if (usuario == null) {
+                            throw new PrestamoInvalidoException();
+                        }
+                        if (!usuario.puedePrestar()) {
+                            throw new PrestamoInvalidoException();
+                        }
+                        System.out.println("Codigo componente:");
+                        String codigo = sc.nextLine();
+                        ComponentesElectronicos componente = inventario.buscarComponente(codigo);
+
+                        System.out.println("Cantidad:");
+                        int cantidad = sc.nextInt();
+                        sc.nextLine();
+
+                        componente.reducirStock(cantidad);
+                        Prestamo p = new Prestamo(usuario, componente, cantidad);
+                        usuario.agregarPrestamo(p);
+                        prestamo.add(p);
+
+                        System.out.println("Prestamo realizado correctamente");
+
+                    } catch (ComponenteNoEncontradoException | PrestamoInvalidoException | StockInsuficienteException e) {
+                        System.out.println(e.getMessage());
                     }
-                    if (usuario == null) {
-                        throw new PrestamoInvalidoException();
-                    }
-                    if (!usuario.puedePrestar()) {
-                        throw new PrestamoInvalidoException();
-                    }
-                    System.out.println("Codigo componente:");
-                    String codigo= sc.nextLine();
-                    ComponentesElectronicos componente= inventario.buscarComponente(codigo);
-                    
-                    System.out.println("Cantidad:");
-                    int cantidad= sc.nextInt();
-                    sc.nextLine();
-                    
-                    componente.reducirStock(cantidad);
-                    Prestamo p= new Prestamo(usuario,componente,cantidad);
-                    
                     
                     break;
                 case 4://Mostrar Prestamos
