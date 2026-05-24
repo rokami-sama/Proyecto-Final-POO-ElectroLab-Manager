@@ -42,7 +42,8 @@ public class ElectroLabManager {
             System.out.println("7.Mostrar Inventario");
             System.out.println("8.Buscar Componente");
             System.out.println("9.Salir");
-
+            System.out.println("Ingresar opcion: ");
+            
             opcion = sc.nextInt();
             sc.nextLine();
 
