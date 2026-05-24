@@ -149,7 +149,9 @@ public class ElectroLabManager {
                             break;
                         }
                     }
-                    
+                    if (usuario == null) {
+                        throw new PrestamoInvalidoException();
+                    }
                     
                     
                     break;
