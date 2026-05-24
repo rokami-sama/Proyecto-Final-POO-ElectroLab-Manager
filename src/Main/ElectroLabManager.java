@@ -176,7 +176,20 @@ public class ElectroLabManager {
                     usuarios.mostrarPrestamos();
                     break;
                 case 5://Devolver Prestamo
-                    
+                    if (prestamo.isEmpty()) {
+                        System.out.println("No hay prestamos");
+                    } else {
+                        for (int i = 0;i < prestamo.size();i++) {
+                            System.out.println(i + " - "+ prestamo.get(i));
+                            System.out.println("----------------");
+                        }
+                        System.out.println("Seleccione prestamo:");
+                        int indice= sc.nextInt();
+                        sc.nextLine();
+                        prestamo.get(indice).devolverPrestamo();
+                        prestamo.remove(indice);
+                        System.out.println("Prestamo devuelto correctamente");
+                    }
                     break;
                 case 6: //Mostrar Inventario
                     inventario.mostrarComponentes();
