@@ -55,11 +55,11 @@ public class ElectroLabManager {
                     switch (profesion) {
                         case 'a':
                             System.out.println("Nombre: ");
-                            String nombreEst = sc.next();
+                            String nombreEst = sc.nextLine();
                             System.out.println("ID: ");
-                            String idEst = sc.next();
+                            String idEst = sc.nextLine();
                             System.out.println("Carrera: ");
-                            String carreraEst = sc.next();
+                            String carreraEst = sc.nextLine();
                             System.out.println("Semestre: ");
                             int semestreEst = sc.nextInt();
                             sc.nextLine();
@@ -70,11 +70,11 @@ public class ElectroLabManager {
                             break;
                         case 'b':
                             System.out.println("Nombre: ");
-                            String nombreDoc = sc.next();
+                            String nombreDoc = sc.nextLine();
                             System.out.println("ID: ");
-                            String idDoc = sc.next();
+                            String idDoc = sc.nextLine();
                             System.out.println("Especialidad: ");
-                            String especialidadDoc = sc.next();
+                            String especialidadDoc = sc.nextLine();
                             sc.nextLine();
 
                             Docente docente = new Docente(nombreDoc, idDoc, especialidadDoc);
@@ -92,9 +92,9 @@ public class ElectroLabManager {
                     switch (comp) {
                         case 'a':
                             System.out.println("Nombre: ");
-                            String nombreRes = sc.next();
+                            String nombreRes = sc.nextLine();
                             System.out.println("Codigo: ");
-                            String codigoRes = sc.next();
+                            String codigoRes = sc.nextLine();
                             System.out.println("Stock: ");
                             int stockRes = sc.nextInt();
                             System.out.println("Resistencia: ");
@@ -107,9 +107,9 @@ public class ElectroLabManager {
                             break;
                         case 'b':
                             System.out.println("Nombre: ");
-                            String nombreCap = sc.next();
+                            String nombreCap = sc.nextLine();
                             System.out.println("Codigo: ");
-                            String codigoCap = sc.next();
+                            String codigoCap = sc.nextLine();
                             System.out.println("Stock: ");
                             int stockCap = sc.nextInt();
                             System.out.println("Resistencia: ");
@@ -122,13 +122,13 @@ public class ElectroLabManager {
                             break;
                         case 'c':
                             System.out.println("Nombre: ");
-                            String nombreSen = sc.next();
+                            String nombreSen = sc.nextLine();
                             System.out.println("Codigo: ");
-                            String codigoSen = sc.next();
+                            String codigoSen = sc.nextLine();
                             System.out.println("Stock: ");
                             int stockSen = sc.nextInt();
                             System.out.println("TipoMedicion: ");
-                            String capacitanciaSen = sc.next();
+                            String capacitanciaSen = sc.nextLine();
                             sc.nextLine();
 
                             Sensor sensor = new Sensor(nombreSen, codigoSen, stockSen, capacitanciaSen);
@@ -203,7 +203,7 @@ public class ElectroLabManager {
                     System.out.println("Codigo Componente: ");
                     String codigoComp = sc.nextLine();
                     try {
-                        inventario.buscarComponente(codigoComp);
+                        System.out.println(inventario.buscarComponente(codigoComp));
                     } catch (ComponenteNoEncontradoException ex) {
                         System.out.println(ex);
                     }
