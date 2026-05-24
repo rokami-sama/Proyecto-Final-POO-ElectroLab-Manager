@@ -140,17 +140,24 @@ public class ElectroLabManager {
                             break;
                     }
                 case 3://Prestar Componente
-                    Prestamo p= new Prestamo(usuario, componente, opcion);
-
-                    usuario.agregarPrestamo(p);
-
-                    prestamo.add(p);
+                    System.out.println("ID Usuario:");
+                    String idUsuario= sc.nextLine();
+                    Usuario usuario = null;
+                    for (Usuario u : usuarios) {
+                        if (u.getId().equalsIgnoreCase(idUsuario)) {
+                            usuario = u;
+                            break;
+                        }
+                    }
+                    
+                    
+                    
                     break;
                 case 4://Mostrar Prestamos
-                    usuario.mostrarPrestamos();
+                    usuarios.mostrarPrestamos();
                     break;
                 case 5://Devolver Prestamo
-
+                    
                     break;
                 case 6: //Mostrar Inventario
                     inventario.mostrarComponentes();
