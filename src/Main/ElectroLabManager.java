@@ -22,7 +22,7 @@ public class ElectroLabManager {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws PrestamoInvalidoException {
         Scanner sc = new Scanner(System.in);
 
         Inventario inventario = PersistenciaInventario.cargar();
@@ -155,6 +155,15 @@ public class ElectroLabManager {
                     if (!usuario.puedePrestar()) {
                         throw new PrestamoInvalidoException();
                     }
+                    System.out.println("Codigo componente:");
+                    String codigo= sc.nextLine();
+                    ComponentesElectronicos componente= inventario.buscarComponente(codigo);
+                    
+                    System.out.println("Cantidad:");
+                    int cantidad= sc.nextInt();
+                    sc.nextLine();
+                    
+                    
                     
                     break;
                 case 4://Mostrar Prestamos
@@ -167,7 +176,7 @@ public class ElectroLabManager {
                     inventario.mostrarComponentes();
                     break;
                 case 7://Buscar Componente
-                    System.out.println("Codigo: ");
+                    System.out.println("Codigo Componente: ");
                     String codigoComp = sc.nextLine();
                     try {
                         inventario.buscarComponente(codigoComp);
