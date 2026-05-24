@@ -37,10 +37,11 @@ public class ElectroLabManager {
             System.out.println("2.Agregar Componente");
             System.out.println("3.Prestar Componente");
             System.out.println("4.Mostrar Prestamos");
-            System.out.println("5.Devolver Prestamo");
-            System.out.println("6.Mostrar Inventario");
-            System.out.println("7.Buscar Componente");
-            System.out.println("8.Salir");
+            System.out.println("5.Mostrar Prestamos de un Usuario");
+            System.out.println("6.Devolver Prestamo");
+            System.out.println("7.Mostrar Inventario");
+            System.out.println("8.Buscar Componente");
+            System.out.println("9.Salir");
 
             opcion = sc.nextInt();
             sc.nextLine();
@@ -180,7 +181,23 @@ public class ElectroLabManager {
                         }
                     }
                     break;
-                case 5://Devolver Prestamo
+                case 5://Buscar Prestamos de un usuario en especifico
+                    System.out.println("ID Usuario:");
+                    String idBuscado= sc.nextLine();
+                    Usuario usuarioBuscado = null;
+                    for (Usuario u : usuarios) {
+                        if (u.getId().equalsIgnoreCase(idBuscado)) {
+                            usuarioBuscado = u;
+                            break;
+                        }
+                    }
+                    if (usuarioBuscado == null) {
+                        System.out.println("Usuario no encontrado");
+                    } else {
+                        usuarioBuscado.mostrarPrestamos();
+                    }
+                    break;
+                case 6://Devolver Prestamo
                     if (prestamos.isEmpty()) {
                         System.out.println("No hay prestamos");
                     } else {
@@ -196,10 +213,10 @@ public class ElectroLabManager {
                         System.out.println("Prestamo devuelto correctamente");
                     }
                     break;
-                case 6: //Mostrar Inventario
+                case 7: //Mostrar Inventario
                     inventario.mostrarComponentes();
                     break;
-                case 7://Buscar Componente
+                case 8://Buscar Componente
                     System.out.println("Codigo Componente: ");
                     String codigoComp = sc.nextLine();
                     try {
@@ -208,7 +225,7 @@ public class ElectroLabManager {
                         System.out.println(ex);
                     }
                     break;
-                case 8://Salir
+                case 9://Salir
                     PersistenciaInventario.guardar(inventario);
                     PersistenciaPrestamos.guardar(prestamos);
                     PersistenciaUsuarios.guardar(usuarios);
@@ -217,7 +234,6 @@ public class ElectroLabManager {
                 default:
                     System.out.println("Opcion Invalida");
                     break;
-
             }
         } while (opcion != 8);
         
