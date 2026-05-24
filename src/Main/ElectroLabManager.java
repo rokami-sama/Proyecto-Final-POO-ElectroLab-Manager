@@ -22,7 +22,7 @@ public class ElectroLabManager {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws PrestamoInvalidoException {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         Inventario inventario = PersistenciaInventario.cargar();
@@ -89,10 +89,10 @@ public class ElectroLabManager {
                     System.out.println("a.Resistenica");
                     System.out.println("b.Capacitor");
                     System.out.println("c.Sensor");
-                    char componente;
-                    componente = sc.next().charAt(0);
+                    char comp;
+                    comp = sc.next().charAt(0);
                     sc.nextLine();
-                    switch (componente) {
+                    switch (comp) {
                         case 'a':
                             System.out.println("Nombre: ");
                             String nombreRes = sc.next();
@@ -144,13 +144,13 @@ public class ElectroLabManager {
                         System.out.println("ID Usuario:");
                         String idUsuario = sc.nextLine();
                         Usuario usuario = null;
-                        for (Usuario u : usuarios) {
+                        for(Usuario u : usuarios) {
                             if (u.getId().equalsIgnoreCase(idUsuario)) {
                                 usuario = u;
                                 break;
                             }
                         }
-                        if (usuario == null) {
+                        if (usuario == null){
                             throw new PrestamoInvalidoException();
                         }
                         if (!usuario.puedePrestar()) {
@@ -159,22 +159,18 @@ public class ElectroLabManager {
                         System.out.println("Codigo componente:");
                         String codigo = sc.nextLine();
                         ComponentesElectronicos componente = inventario.buscarComponente(codigo);
-
                         System.out.println("Cantidad:");
                         int cantidad = sc.nextInt();
                         sc.nextLine();
-
                         componente.reducirStock(cantidad);
                         Prestamo p = new Prestamo(usuario, componente, cantidad);
                         usuario.agregarPrestamo(p);
                         prestamo.add(p);
-
                         System.out.println("Prestamo realizado correctamente");
-
+                        
                     } catch (ComponenteNoEncontradoException | PrestamoInvalidoException | StockInsuficienteException e) {
                         System.out.println(e.getMessage());
                     }
-                    
                     break;
                 case 4://Mostrar Prestamos
                     usuarios.mostrarPrestamos();
