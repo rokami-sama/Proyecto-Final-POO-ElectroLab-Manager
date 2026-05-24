@@ -163,6 +163,8 @@ public class ElectroLabManager {
                     int cantidad= sc.nextInt();
                     sc.nextLine();
                     
+                    componente.reducirStock(cantidad);
+                    Prestamo p= new Prestamo(usuario,componente,cantidad);
                     
                     
                     break;
