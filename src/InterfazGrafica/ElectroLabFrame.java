@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package InterfazGrafica;
-
+        
 import ComponentesElectronicos.*;
 import Excepctions.*;
 import Persistencia.*;
@@ -264,7 +264,7 @@ public class ElectroLabFrame extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this,"Datos guardados");
     }    
         
-}
+
         
         
         
@@ -290,7 +290,6 @@ public class ElectroLabFrame extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new ElectroLabFrame().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
