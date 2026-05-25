@@ -196,7 +196,37 @@ public class ElectroLabFrame extends javax.swing.JFrame {
             areaTexto.append("\nDocente registrado\n");
         }
     }
+    
+    
+    private void agregarComponente() {
+        String[] opciones = {"Resistencia","Capacitor","Sensor"};
+        String tipo = (String) JOptionPane.showInputDialog(this,"Tipo componente","Componente",JOptionPane.QUESTION_MESSAGE,
+                        null,opciones,opciones[0]);
+        String nombre= JOptionPane.showInputDialog("Nombre:");
+        String codigo= JOptionPane.showInputDialog("Codigo:");
+        int stock= Integer.parseInt(JOptionPane.showInputDialog("Stock:"));
+        try {
+            switch (tipo) {
+                case "Resistencia":
+                    double resistencia= Double.parseDouble(JOptionPane.showInputDialog("Resistencia:"));
+                    inventario.agregarComponente(new Resistencia(nombre,codigo,stock,resistencia));
+                    break;
+                case "Capacitor":
+                    double capacitancia= Double.parseDouble(JOptionPane.showInputDialog("Capacitancia:"));
+                    inventario.agregarComponente(new Capacitor(nombre,codigo,stock,capacitancia));
+                    break;
+                case "Sensor":
+                    String tipoMedicion= JOptionPane.showInputDialog("Tipo medicion:");
+                    inventario.agregarComponente(new Sensor(nombre,codigo,stock,tipoMedicion));
+                    break;
+            }
+            areaTexto.append("\nComponente agregado\n");
+        } catch (HeadlessException | NumberFormatException e) {
+            JOptionPane.showMessageDialog(this,e.getMessage());
+        }
+    }
 
+        
         
         
     /**
