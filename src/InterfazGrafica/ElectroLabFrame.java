@@ -253,38 +253,15 @@ public class ElectroLabFrame extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this,"Implementar igual que tu version consola");
     }
 
-        // ===================================================
-        // DEVOLVER
-        // ===================================================
     private void devolverPrestamo() {
-
-        JOptionPane.showMessageDialog(
-                this,
-                "Implementar devolucion"
-        );
+        JOptionPane.showMessageDialog(this,"Implementar devolucion");
     }
 
-        // ===================================================
-        // GUARDAR
-        // ===================================================
     private void guardarDatos() {
-
-        PersistenciaInventario.guardar(
-                inventario
-        );
-
-        PersistenciaUsuarios.guardar(
-                usuarios
-        );
-
-        PersistenciaPrestamos.guardar(
-                prestamos
-        );
-
-        JOptionPane.showMessageDialog(
-                this,
-                "Datos guardados"
-        );
+        PersistenciaInventario.guardar(inventario);
+        PersistenciaUsuarios.guardar(usuarios);
+        PersistenciaPrestamos.guardar(prestamos);
+        JOptionPane.showMessageDialog(this,"Datos guardados");
     }    
         
 }
