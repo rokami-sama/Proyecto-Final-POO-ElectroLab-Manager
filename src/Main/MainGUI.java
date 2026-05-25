@@ -13,6 +13,8 @@ public class MainGUI {
 
     /**
      * @param args the command line arguments
+     * @throws java.lang.ClassNotFoundException
+     * @throws java.io.FileNotFoundException
      */
     public static void main(String[] args) throws ClassNotFoundException, FileNotFoundException {
         // TODO code application logic here
