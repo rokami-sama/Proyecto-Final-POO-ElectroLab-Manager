@@ -177,6 +177,27 @@ public class ElectroLabFrame extends javax.swing.JFrame {
         btnGuardar.addActionListener(e -> guardarDatos());
     }
 
+    private void registrarUsuario() {
+        String[] opciones = {"Estudiante", "Docente"};
+        String tipo = (String) JOptionPane.showInputDialog(this, "Seleccione tipo", "Usuario", JOptionPane.QUESTION_MESSAGE,
+                null, opciones, opciones[0]);
+        String nombre =JOptionPane.showInputDialog("Nombre:");
+        String id =JOptionPane.showInputDialog("ID:");
+        if (tipo.equals("Estudiante")) {
+            String carrera = JOptionPane.showInputDialog("Carrera:");
+            int semestre = Integer.parseInt(JOptionPane.showInputDialog("Semestre:"));
+            Estudiante est = new Estudiante(nombre, id, carrera, semestre);
+            usuarios.add(est);
+            areaTexto.append("\nEstudiante registrado\n");
+        } else {
+            String especialidad = JOptionPane.showInputDialog("Especialidad:");
+            Docente doc = new Docente(nombre, id, especialidad);
+            usuarios.add(doc);
+            areaTexto.append("\nDocente registrado\n");
+        }
+    }
+
+        
         
     /**
      * @param args the command line arguments
