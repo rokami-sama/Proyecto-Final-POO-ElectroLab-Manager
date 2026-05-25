@@ -114,7 +114,7 @@ public class ElectroLabManager {
                             String codigoCap = sc.nextLine();
                             System.out.println("Stock: ");
                             int stockCap = sc.nextInt();
-                            System.out.println("Resistencia: ");
+                            System.out.println("Capacitancia: ");
                             double capacitanciaCap = sc.nextDouble();
                             sc.nextLine();
 
