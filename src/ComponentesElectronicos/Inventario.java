@@ -13,6 +13,11 @@ import Excepctions.*;
  */
 public class Inventario implements Serializable{
     private ArrayList<ComponentesElectronicos> componentes= new ArrayList<>();
+    
+    
+    public ArrayList<ComponentesElectronicos> getComponentes() {
+        return componentes;
+    }
 
     public void agregarComponente(ComponentesElectronicos c){
         componentes.add(c);
