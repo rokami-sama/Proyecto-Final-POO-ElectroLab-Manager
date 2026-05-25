@@ -138,16 +138,12 @@ public class ElectroLabFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
-        // ====================================
-        // AREA TEXTO
-        // ====================================
+        
         areaTexto = new JTextArea();
         areaTexto.setEditable(false);
         JScrollPane scroll= new JScrollPane(areaTexto);
         add(scroll, BorderLayout.CENTER);
-        // ====================================
-        // PANEL BOTONES
-        // ====================================
+        
         JPanel panelBotones= new JPanel();
         panelBotones.setLayout(new GridLayout(4, 2));
         JButton btnRegistrar= new JButton("Registrar Usuario");
@@ -170,9 +166,7 @@ public class ElectroLabFrame extends javax.swing.JFrame {
 
         add(panelBotones, BorderLayout.WEST);
 
-        // ====================================
-        // EVENTOS
-        // ====================================
+        
         btnRegistrar.addActionListener(e -> registrarUsuario());
         btnAgregar.addActionListener(e -> agregarComponente());
         btnPrestamo.addActionListener(e -> realizarPrestamo());
