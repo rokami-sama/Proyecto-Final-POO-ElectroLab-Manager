@@ -240,6 +240,15 @@ public class ElectroLabFrame extends javax.swing.JFrame {
         }
     }
 
+    private void buscarComponente() {
+        String codigo= JOptionPane.showInputDialog("Codigo:");
+        try {
+            areaTexto.setText(inventario.buscarComponente(codigo).toString());
+        } catch (ComponenteNoEncontradoException e) {
+            JOptionPane.showMessageDialog(this,e.getMessage());
+        }
+    }
+
         
 }
         
