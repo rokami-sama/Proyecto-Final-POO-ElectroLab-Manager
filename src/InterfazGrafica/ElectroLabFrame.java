@@ -225,7 +225,15 @@ public class ElectroLabFrame extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this,e.getMessage());
         }
     }
-
+    
+    private void mostrarInventario() {
+        areaTexto.setText("");
+        for (ComponentesElectronicos c: inventario.getComponentes()) {
+            areaTexto.append(c + "\n----------------\n");
+        }
+    }
+    
+}
         
         
         
