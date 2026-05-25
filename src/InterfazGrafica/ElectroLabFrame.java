@@ -233,6 +233,14 @@ public class ElectroLabFrame extends javax.swing.JFrame {
         }
     }
     
+    private void mostrarPrestamos() {
+        areaTexto.setText("");
+        for (Prestamo p : prestamos) {
+            areaTexto.append(p + "\n----------------\n");
+        }
+    }
+
+        
 }
         
         
