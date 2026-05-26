@@ -473,15 +473,18 @@ public class ElectroLabFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonRegistrarActionPerformed
 
     private void jButtonSalir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalir1ActionPerformed
-        // TODO add your handling code here:
+        guardarDatos();
+        System.exit(0);
     }//GEN-LAST:event_jButtonSalir1ActionPerformed
 
     private void jButtonSalir2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalir2ActionPerformed
-        // TODO add your handling code here:
+        guardarDatos();
+        System.exit(0);
     }//GEN-LAST:event_jButtonSalir2ActionPerformed
 
     private void jButtonSalir3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalir3ActionPerformed
-        // TODO add your handling code here:
+        guardarDatos();
+        System.exit(0);
     }//GEN-LAST:event_jButtonSalir3ActionPerformed
 
     private void jButtonAgregarComponenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgregarComponenteActionPerformed
@@ -569,7 +572,11 @@ public class ElectroLabFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonMostrarPrestamosActionPerformed
     
-    
+    private void guardarDatos() {
+        PersistenciaInventario.guardar(inventario);
+        PersistenciaUsuarios.guardar(usuarios);
+        PersistenciaPrestamos.guardar(prestamos);
+    }
 
         
         
