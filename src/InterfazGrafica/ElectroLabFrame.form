@@ -254,9 +254,9 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jTextField9" alignment="0" pref="100" max="32767" attributes="0"/>
-                                  <Component id="jTextField10" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jTextField7" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jTextFieldIDUsuPrestamo" alignment="0" pref="100" max="32767" attributes="0"/>
+                                  <Component id="jTextFieldCodCompPrestamo" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jTextFieldCantPrestamo" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jButtonRealizarPrestamo" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -278,17 +278,17 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldIDUsuPrestamo" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldCodCompPrestamo" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextFieldCantPrestamo" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                               <Component id="jButtonRealizarPrestamo" min="-2" max="-2" attributes="0"/>
@@ -306,7 +306,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="jTextField7">
+            <Component class="javax.swing.JTextField" name="jTextFieldCantPrestamo">
               <Properties>
                 <Property name="text" type="java.lang.String" value="jTextField3"/>
               </Properties>
@@ -326,12 +326,12 @@
                 <Property name="text" type="java.lang.String" value="Cantidad:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField9">
+            <Component class="javax.swing.JTextField" name="jTextFieldIDUsuPrestamo">
               <Properties>
                 <Property name="text" type="java.lang.String" value="jTextField3"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField10">
+            <Component class="javax.swing.JTextField" name="jTextFieldCodCompPrestamo">
               <Properties>
                 <Property name="text" type="java.lang.String" value="jTextField3"/>
               </Properties>
@@ -403,10 +403,10 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jTextField3" alignment="0" pref="100" max="32767" attributes="0"/>
-                                  <Component id="jTextField4" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jTextField5" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jTextField6" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jTextFieldNomInventario" alignment="0" pref="100" max="32767" attributes="0"/>
+                                  <Component id="jTextFieldCodInventario" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jTextFieldStockInventario" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jTextFieldValorInventario" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jRadioButtonResistencia" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
@@ -429,22 +429,22 @@
                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldNomInventario" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldCodInventario" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldStockInventario" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jTextFieldValorInventario" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jRadioButtonResistencia" min="-2" max="-2" attributes="0"/>
@@ -491,22 +491,22 @@
                 <Property name="text" type="java.lang.String" value="Valor:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField3">
+            <Component class="javax.swing.JTextField" name="jTextFieldNomInventario">
               <Properties>
                 <Property name="text" type="java.lang.String" value="jTextField3"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField4">
+            <Component class="javax.swing.JTextField" name="jTextFieldCodInventario">
               <Properties>
                 <Property name="text" type="java.lang.String" value="jTextField3"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField5">
+            <Component class="javax.swing.JTextField" name="jTextFieldStockInventario">
               <Properties>
                 <Property name="text" type="java.lang.String" value="jTextField3"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField6">
+            <Component class="javax.swing.JTextField" name="jTextFieldValorInventario">
               <Properties>
                 <Property name="text" type="java.lang.String" value="jTextField3"/>
               </Properties>

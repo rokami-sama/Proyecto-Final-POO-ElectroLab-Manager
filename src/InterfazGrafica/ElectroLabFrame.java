@@ -61,12 +61,12 @@ public class ElectroLabFrame extends javax.swing.JFrame {
         jTextFieldNombreUsuario = new javax.swing.JTextField();
         jTextFieldIDUsuario = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
-        jTextField7 = new javax.swing.JTextField();
+        jTextFieldCantPrestamo = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
+        jTextFieldIDUsuPrestamo = new javax.swing.JTextField();
+        jTextFieldCodCompPrestamo = new javax.swing.JTextField();
         jButtonRealizarPrestamo = new javax.swing.JButton();
         jButtonDevolverPrestamo = new javax.swing.JButton();
         jButtonMostrarPrestamos = new javax.swing.JButton();
@@ -78,10 +78,10 @@ public class ElectroLabFrame extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        jTextFieldNomInventario = new javax.swing.JTextField();
+        jTextFieldCodInventario = new javax.swing.JTextField();
+        jTextFieldStockInventario = new javax.swing.JTextField();
+        jTextFieldValorInventario = new javax.swing.JTextField();
         jRadioButtonResistencia = new javax.swing.JRadioButton();
         jRadioButtonCapacitor = new javax.swing.JRadioButton();
         jRadioButtonSensor = new javax.swing.JRadioButton();
@@ -191,7 +191,7 @@ public class ElectroLabFrame extends javax.swing.JFrame {
 
         jPanelMenu.addTab("Usuarios", jPanel1);
 
-        jTextField7.setText("jTextField3");
+        jTextFieldCantPrestamo.setText("jTextField3");
 
         jLabel9.setText("ID Usuario:");
 
@@ -199,9 +199,9 @@ public class ElectroLabFrame extends javax.swing.JFrame {
 
         jLabel11.setText("Cantidad:");
 
-        jTextField9.setText("jTextField3");
+        jTextFieldIDUsuPrestamo.setText("jTextField3");
 
-        jTextField10.setText("jTextField3");
+        jTextFieldCodCompPrestamo.setText("jTextField3");
 
         jButtonRealizarPrestamo.setText("Realizar Prestamo");
 
@@ -230,9 +230,9 @@ public class ElectroLabFrame extends javax.swing.JFrame {
                             .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField9, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                            .addComponent(jTextField10)
-                            .addComponent(jTextField7)))
+                            .addComponent(jTextFieldIDUsuPrestamo, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                            .addComponent(jTextFieldCodCompPrestamo)
+                            .addComponent(jTextFieldCantPrestamo)))
                     .addComponent(jButtonRealizarPrestamo)
                     .addComponent(jButtonDevolverPrestamo)
                     .addComponent(jButtonMostrarPrestamos)
@@ -249,15 +249,15 @@ public class ElectroLabFrame extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel9)
-                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldIDUsuPrestamo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel10)
-                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldCodCompPrestamo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel11)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldCantPrestamo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(84, 84, 84)
                         .addComponent(jButtonRealizarPrestamo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
@@ -279,13 +279,13 @@ public class ElectroLabFrame extends javax.swing.JFrame {
 
         jLabel8.setText("Valor:");
 
-        jTextField3.setText("jTextField3");
+        jTextFieldNomInventario.setText("jTextField3");
 
-        jTextField4.setText("jTextField3");
+        jTextFieldCodInventario.setText("jTextField3");
 
-        jTextField5.setText("jTextField3");
+        jTextFieldStockInventario.setText("jTextField3");
 
-        jTextField6.setText("jTextField3");
+        jTextFieldValorInventario.setText("jTextField3");
 
         Componentes.add(jRadioButtonResistencia);
         jRadioButtonResistencia.setSelected(true);
@@ -325,10 +325,10 @@ public class ElectroLabFrame extends javax.swing.JFrame {
                             .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                            .addComponent(jTextField4)
-                            .addComponent(jTextField5)
-                            .addComponent(jTextField6)))
+                            .addComponent(jTextFieldNomInventario, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                            .addComponent(jTextFieldCodInventario)
+                            .addComponent(jTextFieldStockInventario)
+                            .addComponent(jTextFieldValorInventario)))
                     .addComponent(jRadioButtonResistencia, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jRadioButtonCapacitor, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jRadioButtonSensor, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -346,19 +346,19 @@ public class ElectroLabFrame extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldNomInventario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldCodInventario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldStockInventario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(6, 6, 6)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldValorInventario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jRadioButtonResistencia)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -504,17 +504,17 @@ public class ElectroLabFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextAreaInventario;
     private javax.swing.JTextArea jTextAreaPrestamos;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField jTextFieldCantPrestamo;
     private javax.swing.JTextField jTextFieldCarrera;
+    private javax.swing.JTextField jTextFieldCodCompPrestamo;
+    private javax.swing.JTextField jTextFieldCodInventario;
+    private javax.swing.JTextField jTextFieldIDUsuPrestamo;
     private javax.swing.JTextField jTextFieldIDUsuario;
+    private javax.swing.JTextField jTextFieldNomInventario;
     private javax.swing.JTextField jTextFieldNombreUsuario;
     private javax.swing.JTextField jTextFieldSemestre;
+    private javax.swing.JTextField jTextFieldStockInventario;
+    private javax.swing.JTextField jTextFieldValorInventario;
     private javax.swing.JLabel jTitulo;
     // End of variables declaration//GEN-END:variables
 }
