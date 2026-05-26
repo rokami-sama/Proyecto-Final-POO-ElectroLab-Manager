@@ -446,8 +446,24 @@ public class ElectroLabFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioDocenteActionPerformed
 
     private void jButtonRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarActionPerformed
-        // TODO add your handling code here:
-        
+        try {
+            String nombre= jTextFieldNombreUsuario.getText();
+            String id= jTextFieldIDUsuario.getText();
+            if (jRadioButtonEstudiante.isSelected()) {
+                String carrera= jTextFieldCarrera.getText();
+                int semestre= Integer.parseInt(jTextFieldSemestre.getText());
+                Estudiante e= new Estudiante(nombre,id,carrera,semestre);
+                usuarios.add(e);
+                JOptionPane.showMessageDialog(this,"Estudiante registrado");
+            } else {
+                String especialidad= jTextFieldCarrera.getText();
+                Docente d= new Docente(nombre,id,especialidad);
+                usuarios.add(d);
+                JOptionPane.showMessageDialog(this,"Docente registrado");
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this,"Ingrese valores validos");
+        }
     }//GEN-LAST:event_jButtonRegistrarActionPerformed
 
     private void jButtonSalir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalir1ActionPerformed
