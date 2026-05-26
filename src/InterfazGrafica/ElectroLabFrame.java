@@ -48,22 +48,34 @@ public class ElectroLabFrame extends javax.swing.JFrame {
         jTitulo = new javax.swing.JLabel();
         jPanelMenu = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jRadioButtonEstudiante = new javax.swing.JRadioButton();
         jRadioDocente = new javax.swing.JRadioButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jButtonRegistrar = new javax.swing.JButton();
         jButtonSalir1 = new javax.swing.JButton();
         jTextFieldCarrera = new javax.swing.JTextField();
         jTextFieldSemestre = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        jTextFieldNombreUsuario = new javax.swing.JTextField();
+        jTextFieldIDUsuario = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
+        jTextField7 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
+        jTextField10 = new javax.swing.JTextField();
+        jButtonRealizarPrestamo = new javax.swing.JButton();
+        jButtonDevolverPrestamo = new javax.swing.JButton();
+        jButtonMostrarPrestamos = new javax.swing.JButton();
+        jButtonSalir3 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextAreaPrestamos = new javax.swing.JTextArea();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
@@ -87,9 +99,9 @@ public class ElectroLabFrame extends javax.swing.JFrame {
         jTitulo.setText("ELECTROLAB MANAGER");
         jTitulo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel3.setText("Nombre: ");
+        jLabel1.setText("Nombre: ");
 
-        jLabel4.setText("ID:");
+        jLabel2.setText("ID:");
 
         Profesion.add(jRadioButtonEstudiante);
         jRadioButtonEstudiante.setSelected(true);
@@ -100,9 +112,9 @@ public class ElectroLabFrame extends javax.swing.JFrame {
         jRadioDocente.setText("Docente");
         jRadioDocente.addActionListener(this::jRadioDocenteActionPerformed);
 
-        jLabel5.setText("Carrera:");
+        jLabel3.setText("Carrera:");
 
-        jLabel6.setText("Semestre:");
+        jLabel4.setText("Semestre:");
 
         jButtonRegistrar.setText("Registrar");
         jButtonRegistrar.addActionListener(this::jButtonRegistrarActionPerformed);
@@ -114,9 +126,9 @@ public class ElectroLabFrame extends javax.swing.JFrame {
 
         jTextFieldSemestre.setText("jTextField2");
 
-        jTextField1.setText("jTextField1");
+        jTextFieldNombreUsuario.setText("jTextField1");
 
-        jTextField2.setText("jTextField2");
+        jTextFieldIDUsuario.setText("jTextField2");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -130,21 +142,21 @@ public class ElectroLabFrame extends javax.swing.JFrame {
                     .addComponent(jButtonRegistrar)
                     .addComponent(jButtonSalir1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextFieldSemestre, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(21, 21, 21)
                         .addComponent(jTextFieldCarrera))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jTextFieldIDUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldNombreUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(412, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -152,23 +164,23 @@ public class ElectroLabFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1)
+                    .addComponent(jTextFieldNombreUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2)
+                    .addComponent(jTextFieldIDUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jRadioButtonEstudiante)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioDocente)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
+                    .addComponent(jLabel3)
                     .addComponent(jTextFieldCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
+                    .addComponent(jLabel4)
                     .addComponent(jTextFieldSemestre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(53, 53, 53)
                 .addComponent(jButtonRegistrar)
@@ -179,22 +191,89 @@ public class ElectroLabFrame extends javax.swing.JFrame {
 
         jPanelMenu.addTab("Usuarios", jPanel1);
 
+        jTextField7.setText("jTextField3");
+
+        jLabel9.setText("ID Usuario:");
+
+        jLabel10.setText("Codigo Componente:");
+
+        jLabel11.setText("Cantidad:");
+
+        jTextField9.setText("jTextField3");
+
+        jTextField10.setText("jTextField3");
+
+        jButtonRealizarPrestamo.setText("Realizar Prestamo");
+
+        jButtonDevolverPrestamo.setText("Devolver Prestamo");
+
+        jButtonMostrarPrestamos.setText("Mostrar  Prestamos");
+
+        jButtonSalir3.setText("Salir");
+        jButtonSalir3.addActionListener(this::jButtonSalir3ActionPerformed);
+
+        jTextAreaPrestamos.setColumns(20);
+        jTextAreaPrestamos.setRows(5);
+        jScrollPane2.setViewportView(jTextAreaPrestamos);
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 588, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField9, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                            .addComponent(jTextField10)
+                            .addComponent(jTextField7)))
+                    .addComponent(jButtonRealizarPrestamo)
+                    .addComponent(jButtonDevolverPrestamo)
+                    .addComponent(jButtonMostrarPrestamos)
+                    .addComponent(jButtonSalir3))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 391, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9)
+                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel10)
+                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel11)
+                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(84, 84, 84)
+                        .addComponent(jButtonRealizarPrestamo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                        .addComponent(jButtonDevolverPrestamo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonMostrarPrestamos)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonSalir3)
+                        .addGap(48, 48, 48))))
         );
 
         jPanelMenu.addTab("Prestamos", jPanel3);
 
-        jLabel1.setText("Nombre:");
+        jLabel5.setText("Nombre:");
 
-        jLabel2.setText("Codigo:");
+        jLabel6.setText("Codigo:");
 
         jLabel7.setText("Stock:");
 
@@ -240,8 +319,8 @@ public class ElectroLabFrame extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -266,11 +345,11 @@ public class ElectroLabFrame extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
+                    .addComponent(jLabel5)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                    .addComponent(jLabel6)
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -331,14 +410,14 @@ public class ElectroLabFrame extends javax.swing.JFrame {
 
     private void jRadioButtonEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonEstudianteActionPerformed
         // TODO add your handling code here:
-        jLabel5.setText("Carrera: ");
-        jLabel6.setText("Semestre: ");
+        jLabel3.setText("Carrera: ");
+        jLabel4.setText("Semestre: ");
     }//GEN-LAST:event_jRadioButtonEstudianteActionPerformed
 
     private void jRadioDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioDocenteActionPerformed
         // TODO add your handling code here:
-        jLabel5.setText("Especialidad: ");
-        jLabel6.setVisible(false);
+        jLabel3.setText("Especialidad: ");
+        jLabel4.setVisible(false);
         jTextFieldSemestre.setVisible(false);
     }//GEN-LAST:event_jRadioDocenteActionPerformed
 
@@ -354,6 +433,10 @@ public class ElectroLabFrame extends javax.swing.JFrame {
     private void jButtonSalir2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalir2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonSalir2ActionPerformed
+
+    private void jButtonSalir3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalir3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonSalir3ActionPerformed
     
     
 
@@ -389,11 +472,17 @@ public class ElectroLabFrame extends javax.swing.JFrame {
     private javax.swing.ButtonGroup Profesion;
     private javax.swing.JButton jButtonAgregarComponente;
     private javax.swing.JButton jButtonBuscarComponente;
+    private javax.swing.JButton jButtonDevolverPrestamo;
     private javax.swing.JButton jButtonMostrarInventario;
+    private javax.swing.JButton jButtonMostrarPrestamos;
+    private javax.swing.JButton jButtonRealizarPrestamo;
     private javax.swing.JButton jButtonRegistrar;
     private javax.swing.JButton jButtonSalir1;
     private javax.swing.JButton jButtonSalir2;
+    private javax.swing.JButton jButtonSalir3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -401,6 +490,7 @@ public class ElectroLabFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -411,14 +501,19 @@ public class ElectroLabFrame extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButtonSensor;
     private javax.swing.JRadioButton jRadioDocente;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextAreaInventario;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextArea jTextAreaPrestamos;
+    private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField jTextFieldCarrera;
+    private javax.swing.JTextField jTextFieldIDUsuario;
+    private javax.swing.JTextField jTextFieldNombreUsuario;
     private javax.swing.JTextField jTextFieldSemestre;
     private javax.swing.JLabel jTitulo;
     // End of variables declaration//GEN-END:variables
