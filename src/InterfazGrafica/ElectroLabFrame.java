@@ -563,7 +563,10 @@ public class ElectroLabFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonDevolverPrestamoActionPerformed
 
     private void jButtonMostrarPrestamosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMostrarPrestamosActionPerformed
-        // TODO add your handling code here:
+        jTextAreaPrestamos.setText("");
+        for (Prestamo p : prestamos) {
+            jTextAreaPrestamos.append(p + "\n-----------------\n");
+        }
     }//GEN-LAST:event_jButtonMostrarPrestamosActionPerformed
     
     
