@@ -325,6 +325,7 @@ public class ElectroLabFrame extends javax.swing.JFrame {
         jButtonBuscarComponente.setText("Buscar");
 
         jButtonMostrarInventario.setText("Mostrar Inventario");
+        jButtonMostrarInventario.addActionListener(this::jButtonMostrarInventarioActionPerformed);
 
         jButtonSalir2.setText("Salir");
         jButtonSalir2.addActionListener(this::jButtonSalir2ActionPerformed);
@@ -502,6 +503,13 @@ public class ElectroLabFrame extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this,"Datos invalidos");
         }
     }//GEN-LAST:event_jButtonAgregarComponenteActionPerformed
+
+    private void jButtonMostrarInventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMostrarInventarioActionPerformed
+        jTextAreaInventario.setText("");
+        for (ComponentesElectronicos c: inventario.getComponentes()) {
+            jTextAreaInventario.append(c + "\n-----------------\n");
+        }
+    }//GEN-LAST:event_jButtonMostrarInventarioActionPerformed
     
     
 
