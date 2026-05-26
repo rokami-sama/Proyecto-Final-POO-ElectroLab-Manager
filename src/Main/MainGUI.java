@@ -18,7 +18,13 @@ public class MainGUI {
      */
     public static void main(String[] args) throws ClassNotFoundException, FileNotFoundException {
         // TODO code application logic here
-        new ElectroLabFrame().setVisible(true);
+        java.awt.EventQueue.invokeLater(() -> {
+            try {
+                new ElectroLabFrame().setVisible(true);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
     }
     
 }
