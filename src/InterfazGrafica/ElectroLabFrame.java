@@ -25,14 +25,15 @@ public class ElectroLabFrame extends javax.swing.JFrame {
     private ArrayList<Usuario> usuarios;
     private ArrayList<Prestamo> prestamos;
     private JTextArea areaTexto;
+    
+    private JTabbedPane pestanas;
+    private JPanel panelInventario;
+    private JPanel panelUsuarios;
+    private JPanel panelPrestamos;
     /**
      * Creates new form MenuGrafico
      */
-    public ElectroLabFrame() throws ClassNotFoundException, FileNotFoundException {
-        initComponents();
-        inicializaciones();
-    }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -42,228 +43,137 @@ public class ElectroLabFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        Profesion = new javax.swing.ButtonGroup();
+        jTitulo = new javax.swing.JLabel();
+        jPanelMenu = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jRadioButtonProfesion = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(600, 450));
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("ElectroLab Manager");
-        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jTitulo.setText("ELECTROLAB MANAGER");
+        jTitulo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel2.setText("jLabel2");
+        jLabel3.setText("Nombre: ");
 
-        jLabel3.setText("jLabel2");
+        jLabel4.setText("ID:");
 
-        jLabel4.setText("jLabel2");
+        Profesion.add(jRadioButtonProfesion);
+        jRadioButtonProfesion.setSelected(true);
+        jRadioButtonProfesion.setText("Estudiante");
+        jRadioButtonProfesion.addActionListener(this::jRadioButtonProfesionActionPerformed);
 
-        jLabel5.setText("jLabel2");
+        Profesion.add(jRadioButton2);
+        jRadioButton2.setText("Docente");
 
-        jLabel6.setText("jLabel2");
+        jLabel5.setText("Carrera:");
 
-        jLabel7.setText("jLabel2");
+        jLabel6.setText("Semestre:");
 
-        jLabel8.setText("jLabel2");
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButtonProfesion, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(484, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4)
+                .addGap(18, 18, 18)
+                .addComponent(jRadioButtonProfesion)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jRadioButton2)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel6)
+                .addContainerGap(192, Short.MAX_VALUE))
+        );
 
-        jLabel9.setText("jLabel2");
+        jPanelMenu.addTab("Usuarios", jPanel1);
 
-        jLabel10.setText("jLabel2");
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 588, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 381, Short.MAX_VALUE)
+        );
+
+        jPanelMenu.addTab("Inventario", jPanel2);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 588, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 381, Short.MAX_VALUE)
+        );
+
+        jPanelMenu.addTab("Prestamos", jPanel3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanelMenu)
+                .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(272, 272, 272)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(226, Short.MAX_VALUE))
+                .addGap(219, 219, 219)
+                .addComponent(jTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
+                .addContainerGap()
+                .addComponent(jTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel10)
-                .addGap(0, 207, Short.MAX_VALUE))
+                .addComponent(jPanelMenu)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public void inicializaciones() throws ClassNotFoundException, FileNotFoundException {
-        inventario = PersistenciaInventario.cargar();
-        usuarios = PersistenciaUsuarios.cargar();
-        prestamos = PersistenciaPrestamos.cargar();
-        setTitle("ElectroLab Manager");
-        setSize(900, 600);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
-        setLayout(new BorderLayout());
+    private void jRadioButtonProfesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonProfesionActionPerformed
+        // TODO add your handling code here:
+        jLabel5.setText("Carrera: ");
+        jLabel6.setText("Semestre: ");
         
-        areaTexto = new JTextArea();
-        areaTexto.setEditable(false);
-        JScrollPane scroll= new JScrollPane(areaTexto);
-        add(scroll, BorderLayout.CENTER);
-        
-        JPanel panelBotones= new JPanel();
-        panelBotones.setLayout(new GridLayout(4, 2));
-        JButton btnRegistrar= new JButton("Registrar Usuario");
-        JButton btnAgregar= new JButton("Agregar Componente");
-        JButton btnPrestamo= new JButton("Realizar Prestamo");
-        JButton btnMostrarInventario= new JButton("Mostrar Inventario");
-        JButton btnMostrarPrestamos= new JButton("Mostrar Prestamos");
-        JButton btnBuscar= new JButton("Buscar Componente");
-        JButton btnDevolver= new JButton("Devolver Prestamo");
-        JButton btnGuardar= new JButton("Guardar Datos");
-
-        panelBotones.add(btnRegistrar);
-        panelBotones.add(btnAgregar);
-        panelBotones.add(btnPrestamo);
-        panelBotones.add(btnMostrarInventario);
-        panelBotones.add(btnMostrarPrestamos);
-        panelBotones.add(btnBuscar);
-        panelBotones.add(btnDevolver);
-        panelBotones.add(btnGuardar);
-
-        add(panelBotones, BorderLayout.WEST);
-
-        
-        btnRegistrar.addActionListener(e -> registrarUsuario());
-        btnAgregar.addActionListener(e -> agregarComponente());
-        btnPrestamo.addActionListener(e -> realizarPrestamo());
-        btnMostrarInventario.addActionListener(e -> mostrarInventario());
-        btnMostrarPrestamos.addActionListener(e -> mostrarPrestamos());
-        btnBuscar.addActionListener(e -> buscarComponente());
-        btnDevolver.addActionListener(e -> devolverPrestamo());
-        btnGuardar.addActionListener(e -> guardarDatos());
-    }
-
-    private void registrarUsuario() {
-        String[] opciones = {"Estudiante", "Docente"};
-        String tipo = (String) JOptionPane.showInputDialog(this, "Seleccione tipo", "Usuario", JOptionPane.QUESTION_MESSAGE,
-                null, opciones, opciones[0]);
-        String nombre =JOptionPane.showInputDialog("Nombre:");
-        String id =JOptionPane.showInputDialog("ID:");
-        if (tipo.equals("Estudiante")) {
-            String carrera = JOptionPane.showInputDialog("Carrera:");
-            int semestre = Integer.parseInt(JOptionPane.showInputDialog("Semestre:"));
-            Estudiante est = new Estudiante(nombre, id, carrera, semestre);
-            usuarios.add(est);
-            areaTexto.append("\nEstudiante registrado\n");
-        } else {
-            String especialidad = JOptionPane.showInputDialog("Especialidad:");
-            Docente doc = new Docente(nombre, id, especialidad);
-            usuarios.add(doc);
-            areaTexto.append("\nDocente registrado\n");
-        }
-    }
+    }//GEN-LAST:event_jRadioButtonProfesionActionPerformed
     
     
-    private void agregarComponente() {
-        String[] opciones = {"Resistencia","Capacitor","Sensor"};
-        String tipo = (String) JOptionPane.showInputDialog(this,"Tipo componente","Componente",JOptionPane.QUESTION_MESSAGE,
-                        null,opciones,opciones[0]);
-        String nombre= JOptionPane.showInputDialog("Nombre:");
-        String codigo= JOptionPane.showInputDialog("Codigo:");
-        int stock= Integer.parseInt(JOptionPane.showInputDialog("Stock:"));
-        try {
-            switch (tipo) {
-                case "Resistencia":
-                    double resistencia= Double.parseDouble(JOptionPane.showInputDialog("Resistencia:"));
-                    inventario.agregarComponente(new Resistencia(nombre,codigo,stock,resistencia));
-                    break;
-                case "Capacitor":
-                    double capacitancia= Double.parseDouble(JOptionPane.showInputDialog("Capacitancia:"));
-                    inventario.agregarComponente(new Capacitor(nombre,codigo,stock,capacitancia));
-                    break;
-                case "Sensor":
-                    String tipoMedicion= JOptionPane.showInputDialog("Tipo medicion:");
-                    inventario.agregarComponente(new Sensor(nombre,codigo,stock,tipoMedicion));
-                    break;
-            }
-            areaTexto.append("\nComponente agregado\n");
-        } catch (HeadlessException | NumberFormatException e) {
-            JOptionPane.showMessageDialog(this,e.getMessage());
-        }
-    }
-    
-    private void mostrarInventario() {
-        areaTexto.setText("");
-        for (ComponentesElectronicos c: inventario.getComponentes()) {
-            areaTexto.append(c + "\n----------------\n");
-        }
-    }
-    
-    private void mostrarPrestamos() {
-        areaTexto.setText("");
-        for (Prestamo p : prestamos) {
-            areaTexto.append(p + "\n----------------\n");
-        }
-    }
-
-    private void buscarComponente() {
-        String codigo= JOptionPane.showInputDialog("Codigo:");
-        try {
-            areaTexto.setText(inventario.buscarComponente(codigo).toString());
-        } catch (ComponenteNoEncontradoException e) {
-            JOptionPane.showMessageDialog(this,e.getMessage());
-        }
-    }
-    
-    private void realizarPrestamo() {
-        JOptionPane.showMessageDialog(this,"Implementar igual que tu version consola");
-    }
-
-    private void devolverPrestamo() {
-        JOptionPane.showMessageDialog(this,"Implementar devolucion");
-    }
-
-    private void guardarDatos() {
-        PersistenciaInventario.guardar(inventario);
-        PersistenciaUsuarios.guardar(usuarios);
-        PersistenciaPrestamos.guardar(prestamos);
-        JOptionPane.showMessageDialog(this,"Datos guardados");
-    }    
-        
 
         
         
@@ -288,20 +198,22 @@ public class ElectroLabFrame extends javax.swing.JFrame {
             logger.log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.ButtonGroup Profesion;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JTabbedPane jPanelMenu;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButtonProfesion;
+    private javax.swing.JLabel jTitulo;
     // End of variables declaration//GEN-END:variables
 }
