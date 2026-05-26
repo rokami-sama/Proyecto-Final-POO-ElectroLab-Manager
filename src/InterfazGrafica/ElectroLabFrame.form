@@ -340,16 +340,25 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Realizar Prestamo"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonRealizarPrestamoActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButtonDevolverPrestamo">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Devolver Prestamo"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonDevolverPrestamoActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButtonMostrarPrestamos">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Mostrar  Prestamos"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonMostrarPrestamosActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="jButtonSalir3">
               <Properties>

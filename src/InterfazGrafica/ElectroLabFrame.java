@@ -226,10 +226,13 @@ public class ElectroLabFrame extends javax.swing.JFrame {
         jTextFieldCodCompPrestamo.setText("jTextField3");
 
         jButtonRealizarPrestamo.setText("Realizar Prestamo");
+        jButtonRealizarPrestamo.addActionListener(this::jButtonRealizarPrestamoActionPerformed);
 
         jButtonDevolverPrestamo.setText("Devolver Prestamo");
+        jButtonDevolverPrestamo.addActionListener(this::jButtonDevolverPrestamoActionPerformed);
 
         jButtonMostrarPrestamos.setText("Mostrar  Prestamos");
+        jButtonMostrarPrestamos.addActionListener(this::jButtonMostrarPrestamosActionPerformed);
 
         jButtonSalir3.setText("Salir");
         jButtonSalir3.addActionListener(this::jButtonSalir3ActionPerformed);
@@ -521,6 +524,40 @@ public class ElectroLabFrame extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this,e.getMessage());
         }
     }//GEN-LAST:event_jButtonBuscarComponenteActionPerformed
+
+    private void jButtonRealizarPrestamoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRealizarPrestamoActionPerformed
+        try {
+            String id= jTextFieldIDUsuPrestamo.getText();
+            Usuario usuario = null;
+            for (Usuario u : usuarios) {
+                if (u.getId().equalsIgnoreCase(id)) {
+                    usuario = u;
+                    break;
+                }
+            }
+            if (usuario == null) {
+                throw new PrestamoInvalidoException();
+            }
+            String codigo= jTextFieldCodCompPrestamo.getText();
+            ComponentesElectronicos c= inventario.buscarComponente(codigo);
+            int cantidad= Integer.parseInt(jTextFieldCantPrestamo.getText());
+            c.reducirStock(cantidad);
+            Prestamo p= new Prestamo(usuario,c,cantidad);
+            usuario.agregarPrestamo(p);
+            prestamos.add(p);
+            JOptionPane.showMessageDialog(this,"Prestamo realizado");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,e.getMessage());
+        }
+    }//GEN-LAST:event_jButtonRealizarPrestamoActionPerformed
+
+    private void jButtonDevolverPrestamoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDevolverPrestamoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonDevolverPrestamoActionPerformed
+
+    private void jButtonMostrarPrestamosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMostrarPrestamosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonMostrarPrestamosActionPerformed
     
     
 
