@@ -320,6 +320,7 @@ public class ElectroLabFrame extends javax.swing.JFrame {
         jRadioButtonSensor.setText("Sensor");
 
         jButtonAgregarComponente.setText("Agregar");
+        jButtonAgregarComponente.addActionListener(this::jButtonAgregarComponenteActionPerformed);
 
         jButtonBuscarComponente.setText("Buscar");
 
@@ -477,6 +478,30 @@ public class ElectroLabFrame extends javax.swing.JFrame {
     private void jButtonSalir3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalir3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonSalir3ActionPerformed
+
+    private void jButtonAgregarComponenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgregarComponenteActionPerformed
+        try {
+            String nombre= jTextFieldNomInventario.getText();
+            String codigo= jTextFieldCodInventario.getText();
+            int stock= Integer.parseInt(jTextFieldStockInventario.getText());
+            if (jRadioButtonResistencia.isSelected()) {
+                double resistencia= Double.parseDouble(jTextFieldValorInventario.getText());
+                Resistencia r= new Resistencia(nombre,codigo,stock,resistencia);
+                inventario.agregarComponente(r);
+            } else if (jRadioButtonCapacitor.isSelected()) {
+                double capacitancia= Double.parseDouble(jTextFieldValorInventario.getText());
+                Capacitor c= new Capacitor(nombre,codigo,stock,capacitancia);
+                inventario.agregarComponente(c);
+            } else {
+                String tipo= jTextFieldValorInventario.getText();
+                Sensor s= new Sensor(nombre,codigo,stock,tipo);
+                inventario.agregarComponente(s);
+            }
+            JOptionPane.showMessageDialog(this,"Componente agregado");
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this,"Datos invalidos");
+        }
+    }//GEN-LAST:event_jButtonAgregarComponenteActionPerformed
     
     
 
