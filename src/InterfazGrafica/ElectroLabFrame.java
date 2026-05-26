@@ -35,6 +35,26 @@ public class ElectroLabFrame extends javax.swing.JFrame {
      */
     public ElectroLabFrame() throws ClassNotFoundException, FileNotFoundException {
         initComponents();
+        inventario = PersistenciaInventario.cargar();
+        usuarios = PersistenciaUsuarios.cargar();
+        prestamos = PersistenciaPrestamos.cargar();
+
+        setLocationRelativeTo(null);
+
+        jTextFieldCarrera.setText("");
+        jTextFieldSemestre.setText("");
+
+        jTextFieldNombreUsuario.setText("");
+        jTextFieldIDUsuario.setText("");
+
+        jTextFieldNomInventario.setText("");
+        jTextFieldCodInventario.setText("");
+        jTextFieldStockInventario.setText("");
+        jTextFieldValorInventario.setText("");
+
+        jTextFieldIDUsuPrestamo.setText("");
+        jTextFieldCodCompPrestamo.setText("");
+        jTextFieldCantPrestamo.setText("");
     }
     /**
      * This method is called from within the constructor to initialize the form.
