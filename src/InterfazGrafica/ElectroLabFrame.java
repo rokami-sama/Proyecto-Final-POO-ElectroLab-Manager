@@ -552,7 +552,14 @@ public class ElectroLabFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonRealizarPrestamoActionPerformed
 
     private void jButtonDevolverPrestamoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDevolverPrestamoActionPerformed
-        // TODO add your handling code here:
+        try {
+            int indice= Integer.parseInt(JOptionPane.showInputDialog("Indice prestamo:"));
+            prestamos.get(indice).devolverPrestamo();
+            prestamos.remove(indice);
+            JOptionPane.showMessageDialog(this,"Prestamo devuelto");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this,e.getMessage());
+        }
     }//GEN-LAST:event_jButtonDevolverPrestamoActionPerformed
 
     private void jButtonMostrarPrestamosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMostrarPrestamosActionPerformed
