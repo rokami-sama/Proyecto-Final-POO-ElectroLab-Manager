@@ -433,7 +433,9 @@ public class ElectroLabFrame extends javax.swing.JFrame {
     private void jRadioButtonEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonEstudianteActionPerformed
         // TODO add your handling code here:
         jLabel3.setText("Carrera: ");
+        jLabel4.setVisible(true);
         jLabel4.setText("Semestre: ");
+        jTextFieldSemestre.setVisible(true);
     }//GEN-LAST:event_jRadioButtonEstudianteActionPerformed
 
     private void jRadioDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioDocenteActionPerformed
